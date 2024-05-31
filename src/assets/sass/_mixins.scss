@@ -1,0 +1,82 @@
+/*------------------------------------*\
+    mixin
+\*------------------------------------*/
+@mixin tab {
+  @media screen and (min-width: $tab) {
+    @content;
+  }
+}
+@mixin lg {
+  @media screen and (min-width: $lg) {
+    @content;
+  }
+}
+@mixin pc {
+  @media screen and (min-width: $pc) {
+    @content;
+  }
+}
+@mixin txt-en($weight) {
+  font-weight: $weight;
+  font-family: "Montserrat", "Zen Kaku Gothic New", sans-serif;
+  letter-spacing: 0.1em;
+}
+@mixin sec-ttl {
+  position: relative;
+  padding-left: sp_vw(35);
+  font-size: sp_vw(32);
+  @include tab {
+    padding-left: pc_vw(55);
+    font-size: pc_vw(50);
+  }
+  @include pc {
+    padding-left: 55px;
+    font-size: 5rem;
+  }
+  &::before {
+    position: absolute;
+    top: 0.45em;
+    left: 0;
+    content: "";
+    width: sp_vw(25);
+    height: sp_vw(9);
+    background-color: $accent-color;
+    @include tab {
+      width: pc_vw(40);
+      height: pc_vw(11);
+    }
+    @include pc {
+      width: 40px;
+      height: 11px;
+    }
+  }
+}
+@mixin overlay($opacity) {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(212, 255, 0, $opacity);
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+@mixin bg {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-position: center top;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+}
+@mixin logoWidth() {
+  width: sp_vw(98);
+  img {
+    width: 100%;
+  }
+  @include tab {
+    width: pc_vw(112);
+  }
+  @include pc {
+    width: 112px;
+  }
+}

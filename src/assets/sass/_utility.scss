@@ -1,0 +1,155 @@
+/*------------------------------------*\
+    utility
+\*------------------------------------*/
+.u_sp {
+  &--none {
+    display: none !important;
+    @include tab {
+      display: inline-block !important;
+    }
+  }
+}
+.u_pc {
+  &--none {
+    @include tab {
+      display: none !important;
+    }
+  }
+}
+.u_mb {
+  &--0 {
+    margin-bottom: 0 !important;
+  }
+  &--s{
+    margin-bottom: 20px!important;
+    @include tab{
+      margin-bottom: 40px!important;
+    }
+  }
+  &--m{
+    margin-bottom: 80px!important;
+    @include tab{
+      margin-bottom: 100px!important;
+    }
+  }
+}
+.u_w {
+  &--full {
+    width: 100% !important;
+  }
+}
+.u_txt-hover {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  &:hover,
+  &:active {
+    color: $accent-color;
+  }
+}
+.u_bg {
+  &--transparent {
+    background-color: transparent !important;
+  }
+}
+.u_filter-multiply {
+  mix-blend-mode: multiply !important;
+}
+.u_nowrap {
+  white-space: nowrap;
+}
+.u_txt {
+  &--strong {
+    font-size: sp_vw(16) !important;
+    @include tab {
+      font-size: pc_vw(16) !important;
+    }
+    @include pc {
+      font-size: 1.6rem;
+    }
+  }
+   &--s {
+    font-size: sp_vw(12);
+    line-height: 2.4;
+    @include tab {
+      font-size: pc_vw(13);
+    }
+    @include pc {
+      font-size: 1.3rem;
+    }
+  }
+  &--l {
+    font-size: sp_vw(22) !important;
+    @include tab {
+      font-size: pc_vw(33) !important;
+    }
+    @include pc {
+      font-size: 3.3rem;
+    }
+  }
+  &--small-bottom{
+    vertical-align: sub;
+    font-size: 0.85em;
+    position: relative;
+    line-height: 1;
+    left: -0.2em;
+    bottom: 0.3em;
+  }
+}
+.u_mb {
+  &--20 {
+    margin-bottom: sp_vw(20) !important;
+    @include tab {
+      margin-bottom: pc_vw(20) !important;
+    }
+    @include pc {
+      margin-bottom: 20px;
+    }
+  }
+  &--40 {
+    margin-bottom: sp_vw(40) !important;
+    @include tab {
+      margin-bottom: pc_vw(40) !important;
+    }
+    @include pc {
+      margin-bottom: 40px;
+    }
+  }
+  &--80 {
+    margin-bottom: sp_vw(80) !important;
+    @include tab {
+      margin-bottom: pc_vw(80) !important;
+    }
+    @include pc {
+      margin-bottom: 80px;
+    }
+  }
+}
+
+.u_txt-link {
+  a {
+    border-bottom: 1px solid;
+    &:hover,
+    &:active {
+      color: $accent-color;
+    }
+  }
+  .material-symbols-outlined {
+    bottom: -0.3em;
+    right: -0.2em;
+    font-size: sp_vw(15);
+    @include tab {
+      font-size: pc_vw(18);
+    }
+    @include pc {
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.u_hover-opacity{
+  opacity: 1;
+  &:hover,
+  &:active{
+    opacity: 0.8;
+  }
+}

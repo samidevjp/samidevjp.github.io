@@ -1,0 +1,11 @@
+/*------------------------------------*\
+    functions
+\*------------------------------------*/
+@function sp_vw($size, $viewport: 375) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}
+@function pc_vw($size, $viewport: 1440) {
+  $rate: 100 / $viewport;
+  @return $rate * $size * 1vw;
+}

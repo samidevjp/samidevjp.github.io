@@ -1,0 +1,516 @@
+/*------------------------------------*\
+    module
+\*------------------------------------*/
+.kv {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+
+  &__ttl {
+    @include txt-en(bold);
+    letter-spacing: 0.2em;
+    font-size: sp_vw(25);
+    white-space: nowrap;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    @include tab {
+      font-size: pc_vw(50);
+    }
+    @include pc {
+      font-size: 6rem;
+    }
+  }
+}
+/*-------- 下層ページ共通  ---------*/
+.pg_wrap {
+  position: relative;
+  overflow: hidden;
+}
+.pg_link {
+  display: grid;
+  flex-flow: column;
+  gap: sp_vw(15);
+  @include tab {
+    flex-flow: row;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: pc_vw(22) pc_vw(25);
+  }
+  @include pc {
+    gap: 22px 25px;
+  }
+}
+
+/*-------- WORKS 制作事例 アーカイブページ  ---------*/
+.pg_works {
+  position: relative;
+  z-index: 2;
+  * {
+    position: relative;
+  }
+
+  &__disc {
+    margin-bottom: 80px;
+    line-height: 2;
+    @include tab {
+      margin-bottom: pc_vw(90);
+    }
+    @include pc {
+      margin-bottom: 90px;
+    }
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+  }
+  .p_pg-head {
+    @include tab {
+      margin-bottom: pc_vw(90);
+    }
+    @include pc {
+      margin-bottom: 90px;
+    }
+  }
+  &__ttl {
+    font-size: sp_vw(32);
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin-top: sp_vw(61);
+    margin-bottom: sp_vw(61);
+    @include tab {
+      font-size: pc_vw(33);
+      margin-top: 0;
+      margin-bottom: pc_vw(102);
+    }
+    @include pc {
+      font-size: 3.3rem;
+      margin-bottom: 102px;
+    }
+  }
+  // &__select-box {
+  //   margin-bottom: sp_vw(15);
+  //   @include tab {
+  //     margin-bottom: 0;
+  //   }
+  //   &:last-of-type {
+  //     margin-bottom: sp_vw(80);
+  //     @include tab {
+  //       margin-bottom: 0;
+  //     }
+  //   }
+  // }
+  // &__select-ttl {
+  //   font-size: sp_vw(20);
+  //   line-height: 1;
+  //   @include txt-en(700);
+  //   margin-bottom: sp_vw(12);
+  //   letter-spacing: 0.05em;
+  //   @include tab {
+  //     font-size: pc_vw(20);
+  //     margin-bottom: pc_vw(15);
+  //   }
+  //   @include pc {
+  //     font-size: 2rem;
+  //     margin-bottom: 15px;
+  //   }
+  // }
+  // &__select-wrap {
+  //   @include tab {
+  //     position: relative;
+  //     z-index: 2;
+  //     height: pc_vw(220);
+  //   }
+  //   @include pc {
+  //     height: 220px;
+  //   }
+  // }
+  // &__select-area {
+  //   position: relative;
+  //   z-index: 2;
+  //   width: 100%;
+  //   @include tab {
+  //     position: absolute;
+  //     display: grid;
+  //     grid-template-columns: 1fr 1fr 1fr;
+  //     gap: pc_vw(25);
+  //     margin-bottom: pc_vw(130);
+  //   }
+  //   @include pc {
+  //     gap: 25px;
+  //     margin-bottom: 130px;
+  //   }
+  // }
+  // &__select-item {
+  //   position: relative;
+  //   &::before {
+  //     content: "●";
+  //     color: $color-black;
+  //     position: absolute;
+  //     z-index: 1;
+  //     left: 2em;
+  //     top: 54%;
+  //     transform: translateY(-50%);
+  //     font-size: 0.4em;
+  //     display: none;
+  //   }
+  //   &:hover,
+  //   &:active {
+  //     &::before {
+  //       @include tab {
+  //         display: block;
+  //       }
+  //     }
+  //   }
+  // }
+  &__group {
+    margin-top: 60px;
+    margin-bottom: sp_vw(100);
+    position: relative;
+    @include tab {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: pc_vw(70) pc_vw(25);
+      margin-bottom: pc_vw(100);
+    }
+    @include pc {
+      gap: 70px 25px;
+      margin-bottom: 100px;
+    }
+  }
+  &__item {
+    width: 100%;
+    margin-bottom: sp_vw(45);
+
+    @include tab {
+      margin-bottom: 0;
+    }
+    .thumb {
+      height: sp_vw(240);
+      margin-bottom: sp_vw(10);
+      border: 1px solid #ccc;
+      background-color: #ccc;
+      @include tab {
+        height: pc_vw(500);
+        margin-bottom: pc_vw(10);
+      }
+      @include pc {
+        max-height: 500px;
+        margin-bottom: 20px;
+      }
+      &:hover,
+      &:active {
+        img {
+          transform: scale(1.2);
+        }
+      }
+    }
+    img {
+      object-fit: cover;
+      object-position: 50% 0%;
+    }
+    .item-content {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__video {
+    iframe {
+      width: 100%;
+      height: sp_vw(200);
+      @include tab {
+        width: auto;
+        height: pc_vw(200);
+      }
+      @include pc {
+        height: 200px;
+      }
+    }
+  }
+  &__item-cap {
+    line-height: 1.6;
+    .ttl {
+      font-size: large;
+      font-weight: bold;
+    }
+    .client {
+      margin-bottom: 1em;
+      font-size: 1.4rem;
+      padding-bottom: 1em;
+      border-bottom: 1px solid;
+    }
+    .period {
+      font-size: 1.4rem;
+      margin-top: 20px;
+    }
+    .category {
+      font-size: 1.4rem;
+      margin-top: 16px;
+    }
+    .point {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__other {
+    margin-top: sp_vw(40);
+    @include tab {
+      text-align: center;
+      letter-spacing: 0.1em;
+      margin-top: pc_vw(40);
+    }
+    @include pc {
+      margin-top: 40px;
+    }
+  }
+  &__back {
+    margin-top: sp_vw(80);
+    @include tab {
+      margin-top: pc_vw(80);
+    }
+    @include pc {
+      margin-top: 80px;
+    }
+  }
+}
+/*-------- WORKS 制作事例 個別ページ  ---------*/
+.pg_prj {
+  position: relative;
+  z-index: 2;
+  * {
+    position: relative;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    padding-bottom: sp_vw(85);
+    @include tab {
+      padding-bottom: pc_vw(148);
+    }
+    @include pc {
+      padding-bottom: 148px;
+    }
+  }
+  &__main-img {
+    width: 100%;
+    height: sp_vw(242);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: sp_vw(67);
+    @include tab {
+      height: pc_vw(600);
+      margin-bottom: pc_vw(80);
+    }
+    @include pc {
+      height: 600px;
+      margin-bottom: 80px;
+    }
+    img {
+      object-fit: contain;
+      object-position: center center;
+      max-height: 100%;
+    }
+  }
+  &__main-video {
+    iframe {
+      width: 100%;
+      height: sp_vw(200);
+      margin-bottom: sp_vw(67);
+      @include tab {
+        height: pc_vw(550);
+        margin-bottom: pc_vw(80);
+      }
+      @include pc {
+        height: 550px;
+        margin-bottom: 80px;
+      }
+    }
+  }
+  &__slider {
+    @include tab {
+      margin: 0 auto;
+      max-width: $globalWidth;
+    }
+    @include pc {
+      margin: 0 auto;
+      max-width: 1010px;
+      padding: 0 35px;
+    }
+    .slick-track {
+      height: fit-content;
+    }
+    .slick-dots {
+      display: flex;
+      margin: 0 sp_vw(35);
+      width: auto;
+      @include tab {
+        display: none;
+      }
+      li {
+        width: 100%;
+        height: 8px;
+        background-color: #484848;
+        margin: 0;
+        transition: 0.5s ease;
+        &.slick-active {
+          background-color: #90949b;
+        }
+      }
+    }
+  }
+  &__slider-item {
+    margin-right: 10px;
+    height: sp_vw(184);
+    overflow: hidden;
+    background-color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    @include tab {
+      margin-right: 20px;
+      height: pc_vw(244);
+    }
+    @include pc {
+      margin-right: 20px;
+      height: 244px;
+    }
+    img {
+      object-fit: contain;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    margin-top: 10px;
+    a {
+      &:hover,
+      &:active {
+        color: $color-black;
+      }
+    }
+    .material-symbols-outlined {
+      bottom: -0.3em;
+      right: -0.2em;
+      font-size: sp_vw(15);
+      @include tab {
+        font-size: pc_vw(18);
+      }
+      @include pc {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  &__ttl {
+    font-size: sp_vw(24);
+    line-height: 1.4;
+    margin-bottom: sp_vw(14);
+    @include tab {
+      font-size: pc_vw(33);
+      margin-bottom: pc_vw(20);
+    }
+    @include pc {
+      font-size: 3.3rem;
+      margin-bottom: 20px;
+    }
+  }
+  &__client {
+    font-size: sp_vw(20);
+    line-height: 1.4;
+    margin-bottom: sp_vw(46);
+    @include tab {
+      font-size: pc_vw(20);
+      margin-bottom: pc_vw(50);
+    }
+    @include pc {
+      font-size: 2rem;
+      margin-bottom: 50px;
+    }
+  }
+  &__desc {
+    margin-bottom: sp_vw(55);
+    @include tab {
+      margin-bottom: pc_vw(50);
+    }
+    @include pc {
+      margin-bottom: 50px;
+    }
+  }
+  &__txt-bl {
+    margin: sp_vw(28) 0 sp_vw(65);
+    @include tab {
+      margin: pc_vw(20) 0 pc_vw(70);
+    }
+    @include pc {
+      margin: 20px 0 70px;
+    }
+  }
+  &__detail {
+    margin-top: sp_vw(80);
+    margin-bottom: sp_vw(149);
+    @include tab {
+      margin-top: pc_vw(100);
+      margin-bottom: pc_vw(130);
+    }
+    @include pc {
+      margin-top: 100px;
+      margin-bottom: 130px;
+    }
+  }
+  &__back {
+    margin-bottom: sp_vw(39);
+    @include tab {
+      margin-bottom: pc_vw(70);
+    }
+    @include pc {
+      margin-bottom: 70px;
+    }
+  }
+  &__other {
+    @include tab {
+      text-align: center;
+    }
+    a {
+      color: $color-white;
+      text-decoration-color: $color-white;
+    }
+  }
+}
+
+/*-------- 404  ---------*/
+.pg_404 {
+  padding-bottom: sp_vw(80);
+  @include tab {
+    padding-bottom: 80px;
+  }
+  &__body {
+    margin-bottom: sp_vw(40);
+    @include tab {
+      margin-bottom: 40px;
+    }
+  }
+}
+/*-------- カスタムCSS  ---------*/
+
+.profImg {
+  max-width: 220px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 20px;
+  @include tab {
+    margin-bottom: 40px;
+  }
+}
+.profDesc {
+  @include tab {
+    display: flex;
+    gap: 40px;
+  }
+}
+.profLead {
+  margin-bottom: 40px;
+}

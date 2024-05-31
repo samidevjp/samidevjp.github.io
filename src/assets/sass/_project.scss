@@ -1,0 +1,634 @@
+/*------------------------------------*\
+    project
+\*------------------------------------*/
+.p_container {
+  position: relative;
+  z-index: 1;
+  &::before {
+    content: "";
+    width: calc(100% - 8vw);
+    height: 100%;
+    background-color: $gray-lighter;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    @include tab {
+      width: calc(100% - 2.9vw);
+    }
+  }
+  &__inner {
+    padding: 0 4vw;
+    margin: 0 auto;
+    @include tab {
+      max-width: $globalWidth;
+      padding: 0;
+    }
+    @include pc {
+      max-width: 1010px;
+    }
+  }
+  &__inner-inner {
+    padding: 0 sp_vw(20);
+    @include tab {
+      padding: 0;
+      max-width: $globalWidth;
+    }
+    @include pc {
+      max-width: 1010px;
+    }
+  }
+}
+.p_pg-head {
+  padding: sp_vw(80) 0 sp_vw(20);
+  margin-bottom: sp_vw(40);
+  border-bottom: 1px solid #595959;
+  @include tab {
+    padding: pc_vw(180) 0 pc_vw(70);
+    margin-bottom: pc_vw(120);
+  }
+  @include pc {
+    padding: 180px 0 70px;
+    margin-bottom: 120px;
+  }
+  .main {
+    font-size: 3.4rem;
+    margin-bottom: sp_vw(5);
+    line-height: 1.2;
+    letter-spacing: 0.05em;
+    @include txt-en(bold);
+    @include tab {
+      margin-bottom: pc_vw(5);
+      font-size: 6rem;
+    }
+    @include pc {
+      margin-bottom: 10px;
+      font-size: 7rem;
+    }
+  }
+  .sub {
+    font-size: 1.4rem;
+  }
+}
+.p_ttl {
+  margin-bottom: sp_vw(30);
+  @include tab {
+    display: flex;
+    align-items: center;
+    gap: pc_vw(20);
+  }
+  @include pc {
+    gap: 20px;
+  }
+  .main {
+    margin-bottom: sp_vw(10);
+    font-size: 3.8rem;
+    line-height: 1;
+    @include txt-en(700);
+
+    @include tab {
+      font-size: 6.5rem;
+    }
+  }
+  .sub {
+    display: block;
+    font-size: 1.4rem;
+    letter-spacing: 0.05em;
+    line-height: 1.2;
+    position: relative;
+    @include tab {
+      bottom: pc_vw(-10);
+    }
+    @include pc {
+      font-size: 1.6rem;
+      bottom: -10px;
+    }
+  }
+  &.pc_right {
+    @include tab {
+      flex-flow: row-reverse;
+    }
+  }
+}
+
+.p_sec {
+  &__item {
+    /* アイテムごとに交互に左右配置にさせたい場合は兄弟要素にこのクラスを付与する */
+  }
+  &__ttl {
+    @include sec-ttl;
+    position: relative;
+    margin-bottom: 40px;
+    @include tab {
+      max-width: $globalWidth;
+      margin-left: auto;
+      margin-right: auto;
+      left: pc_vw(-55);
+      display: flex;
+      align-items: baseline;
+      gap: pc_vw(20);
+    }
+    @include pc {
+      max-width: 1010px;
+      left: -55px;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+    .main,
+    .sub {
+      @include tab {
+      }
+    }
+    .main {
+      @include txt-en(700);
+      line-height: 1.1;
+    }
+    .sub {
+      font-size: sp_vw(13);
+      @include tab {
+        font-size: pc_vw(16);
+      }
+      @include pc {
+        font-size: 1.6rem;
+      }
+    }
+    .p_sec__item:nth-of-type(2n) & {
+      /* 連続する.p_sec__itemに内包されている場合、
+      左右交互に端寄せで表示 */
+      @include tab {
+        text-align: right;
+        padding-left: 0;
+        padding-right: pc_vw(35);
+        flex-flow: row-reverse;
+        justify-content: right;
+        left: auto;
+        right: pc_vw(-35);
+      }
+      @include pc {
+        padding-right: 35px;
+        right: -35px;
+      }
+      &::before {
+        @include tab {
+          left: auto;
+          right: pc_vw(-25);
+        }
+        @include pc {
+          right: -25px;
+        }
+      }
+    }
+    &--secondary {
+      @include txt-en(700);
+      font-size: sp_vw(24);
+      line-height: 1.666;
+      @include tab {
+        font-size: pc_vw(33);
+      }
+      @include pc {
+        font-size: 3.3rem;
+      }
+    }
+    &--tertiary {
+      @include txt-en(700);
+      font-size: sp_vw(24);
+      @include tab {
+        font-size: pc_vw(24);
+      }
+      @include pc {
+        font-size: 2.4rem;
+      }
+    }
+    &--s {
+      @include sec-ttl;
+      max-width: $globalWidth;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: sp_vw(23);
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+      left: sp_vw(-57);
+      @include tab {
+        font-size: pc_vw(23);
+        left: pc_vw(-55);
+        gap: pc_vw(20);
+        margin-bottom: pc_vw(20);
+      }
+      @include pc {
+        font-size: 2.3rem;
+        left: -55px;
+        gap: 20px;
+        margin-bottom: 20px;
+      }
+      &::before {
+        width: sp_vw(20);
+        height: sp_vw(5);
+        top: 0.65em;
+        @include tab {
+          left: pc_vw(20);
+          width: pc_vw(20);
+          height: pc_vw(5);
+        }
+        @include pc {
+          left: 20px;
+          width: 20px;
+          height: 5px;
+        }
+      }
+    }
+    &--xs {
+      @include sec-ttl;
+      padding-left: 30px;
+      max-width: $globalWidth;
+      margin-left: auto;
+      margin-right: auto;
+      font-size: 1.8rem;
+      letter-spacing: 0.05em;
+      line-height: 1.4;
+
+      margin-bottom: 10px;
+      left: -55px;
+      gap: 20px;
+      @include tab {
+        font-size: 1.8rem;
+        padding-left: 25px;
+        left: auto;
+      }
+      @include pc {
+        font-size: 1.8rem;
+        gap: 20px;
+      }
+      &::before {
+        width: 15px;
+        height: 4px;
+        left: 0px;
+
+        top: 0.65em;
+        @include tab {
+          left: 0;
+        }
+        @include pc {
+        }
+      }
+    }
+  }
+  &__ttl-m {
+    font-size: sp_vw(24);
+    line-height: 1.4;
+    margin-bottom: sp_vw(30);
+    @include tab {
+      font-size: pc_vw(33);
+      margin-bottom: pc_vw(45);
+    }
+    @include pc {
+      font-size: 3.3rem;
+      margin-bottom: 45px;
+    }
+    .p_sec__item:nth-of-type(2n) & {
+      /* 連続する.p_sec__itemに内包されている場合、
+      左右交互に端寄せで表示 */
+      @include tab {
+        text-align: right;
+      }
+    }
+  }
+  &__sec-lead {
+    margin-bottom: 1.5em;
+    &:last-of-type {
+      margin-bottom: sp_vw(40);
+      @include tab {
+        margin-bottom: pc_vw(45);
+      }
+      @include pc {
+        margin-bottom: 45px;
+      }
+    }
+  }
+  &__link {
+    @include tab {
+      margin-left: 0;
+      margin-right: auto;
+    }
+    .p_sec__item:nth-of-type(2n) & {
+      /* 連続する.p_sec__itemに内包されている場合、
+      左右交互に端寄せで表示 */
+      @include tab {
+        margin-left: auto;
+        margin-right: 0;
+      }
+    }
+  }
+}
+.p_card {
+  &__item {
+    padding: sp_vw(65) sp_vw(20);
+    border-radius: sp_vw(10);
+    margin-bottom: sp_vw(36);
+    background-color: $color-white;
+    @include tab {
+      border-radius: pc_vw(20);
+      display: grid;
+      align-items: center;
+      grid-template-columns: 1fr 3fr;
+      padding: pc_vw(55) pc_vw(80) pc_vw(49);
+      margin-bottom: pc_vw(20);
+    }
+    @include pc {
+      border-radius: 20px;
+      padding: 55px 80px 49px;
+      margin-bottom: 20px;
+    }
+    &:last-child {
+      margin-bottom: 0;
+    }
+    .num {
+      @include txt-en(700);
+      position: relative;
+      font-size: sp_vw(50);
+      text-align: center;
+      line-height: 1;
+      z-index: 1;
+      margin-bottom: sp_vw(30);
+      @include tab {
+        font-size: pc_vw(70);
+        margin-bottom: 0;
+      }
+      @include pc {
+        font-size: 7rem;
+      }
+      &::before {
+        content: "";
+        width: sp_vw(80);
+        height: sp_vw(80);
+        background-color: $accent-color;
+        border-radius: sp_vw(80);
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        left: 50%;
+        transform: translate(-100%, -50%);
+        @include tab {
+          width: pc_vw(89);
+          height: pc_vw(89);
+          top: 0;
+          left: 60%;
+        }
+        @include pc {
+          width: 89px;
+          height: 89px;
+        }
+      }
+    }
+    .ttl-main {
+      @include txt-en(700);
+      font-size: sp_vw(32);
+      line-height: 1.2;
+      letter-spacing: 0;
+      white-space: nowrap;
+      @include tab {
+        font-size: pc_vw(45);
+      }
+      @include pc {
+        font-size: 4.5rem;
+      }
+    }
+    .ttl-sub {
+      font-size: sp_vw(16);
+      margin-bottom: sp_vw(25);
+      letter-spacing: 0.1em;
+      @include tab {
+        line-height: 2;
+        font-size: pc_vw(16);
+        margin-bottom: pc_vw(23);
+      }
+      @include pc {
+        font-size: 1.6rem;
+        margin-bottom: 23px;
+      }
+    }
+    .lead {
+      @include tab {
+        line-height: 2.14;
+      }
+    }
+  }
+}
+.p_icon-media {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: sp_vw(40) sp_vw(7);
+  @include tab {
+    display: flex;
+    gap: pc_vw(11);
+  }
+  @include pc {
+    gap: 11px;
+  }
+  &__item {
+    @include tab {
+      width: pc_vw(193);
+    }
+    @include pc {
+      width: 193px;
+    }
+  }
+  &__icon {
+    margin-bottom: sp_vw(7);
+    @include tab {
+      margin-bottom: pc_vw(10);
+    }
+    @include pc {
+      margin-bottom: 10px;
+    }
+  }
+  &__cap {
+    text-align: center;
+    font-size: sp_vw(16);
+    line-height: 1.4;
+    @include tab {
+      font-size: pc_vw(16);
+    }
+    @include pc {
+      font-size: 1.6rem;
+    }
+  }
+}
+.p_btn-area {
+  display: grid;
+  flex-flow: column;
+  gap: sp_vw(20);
+  @include tab {
+    grid-template-columns: 1fr 1fr;
+    gap: pc_vw(20);
+  }
+  @include pc {
+    gap: 20px;
+  }
+}
+.p_table {
+  &--primary {
+    $table-background-color: $color-white;
+    $table-border-color: $gray-lightest;
+    width: 100%;
+    border-collapse: collapse;
+    background-color: $table-background-color;
+    border-radius: sp_vw(20);
+    overflow: hidden;
+    @include tab {
+      border-radius: pc_vw(20);
+    }
+    @include pc {
+      border-radius: 2rem;
+    }
+    th,
+    td {
+      border: 3px solid $table-border-color;
+    }
+    th {
+      vertical-align: middle;
+      width: sp_vw(76);
+      font-size: sp_vw(16);
+      padding: sp_vw(15);
+      white-space: nowrap;
+      @include tab {
+        width: pc_vw(187);
+        font-size: pc_vw(17);
+        padding: pc_vw(15);
+      }
+      @include pc {
+        width: 187px;
+        font-size: 1.7rem;
+        padding: 15px;
+      }
+    }
+    td {
+      line-height: 1.8;
+      padding: sp_vw(10) sp_vw(15);
+      vertical-align: middle;
+      @include tab {
+        font-size: pc_vw(15);
+        line-height: 2.5;
+        padding: pc_vw(15) pc_vw(50);
+        vertical-align: middle;
+      }
+      @include pc {
+        font-size: 1.5rem;
+        padding: 15px 50px;
+      }
+    }
+  }
+  &--secondary {
+    @extend .p_table--primary;
+    border-width: 2px;
+    $table-cell-padding: 10px 10px;
+    th,
+    td {
+      padding: $table-cell-padding;
+    }
+    th {
+      background-color: #e1e1e1;
+      font-size: inherit;
+    }
+    td {
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+}
+.p_works-cap {
+  .info_group {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    display: none;
+    padding: 0 20px;
+    @include tab {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+      font-size: pc_vw(14);
+      line-height: 1.4;
+      letter-spacing: 0;
+      text-align: center;
+    }
+    @include pc {
+      font-size: 1.4rem;
+    }
+  }
+  .title {
+    @include txt-en(700);
+    font-size: sp_vw(20);
+    text-decoration: underline 2px;
+    text-decoration-color: $color-black;
+    text-decoration-thickness: 2px;
+    margin-bottom: 0.5em;
+    @include tab {
+      font-size: pc_vw(20);
+    }
+    @include pc {
+      font-size: 2rem;
+    }
+  }
+  a.thumb {
+    $transition: 0.6s ease;
+    display: block;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    max-height: 450px;
+    &::before {
+      transition: $transition;
+      position: absolute;
+      @include overlay(0);
+    }
+    img {
+      transition: $transition;
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      transform: scale(1);
+    }
+    &:hover,
+    &:active {
+      &::before {
+        @include overlay(0.65);
+      }
+      img {
+        transform: scale(1.3);
+      }
+      .info_group {
+        opacity: 1;
+        color: $color-black;
+      }
+      img {
+        transform: scale(1.3);
+      }
+    }
+  }
+}
+
+.gmap img {
+  width: 100%;
+}
+
+.p_list {
+  &--1em {
+    li {
+      position: relative;
+      padding-left: 1em;
+      &::before {
+        content: "・";
+        position: absolute;
+        left: 0;
+        width: 1em;
+        height: 1em;
+      }
+    }
+  }
+}

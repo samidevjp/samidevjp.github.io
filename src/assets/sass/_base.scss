@@ -1,0 +1,27 @@
+/*------------------------------------*\
+  base
+\*------------------------------------*/
+// Google Font
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&family=Zen+Kaku+Gothic+New:wght@700&family=Noto+Sans+JP&display=swap");
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  font-weight: 700;
+  color: $color-txt;
+  background-color: #fff;
+}
+a {
+  color: $color-black;
+  &:hover,
+  &:active {
+    color: $color-black;
+  }
+}

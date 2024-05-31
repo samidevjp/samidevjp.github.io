@@ -1,0 +1,330 @@
+/*------------------------------------*\
+    component
+\*------------------------------------*/
+/*-----------------------------------------------------------------------------*/
+/* button elements */
+// ボタンのベーススタイル
+.c_btn {
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: sp_vw(60);
+  width: 100%;
+  border: 1px solid;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  font-size: sp_vw(25);
+  color: $color-white;
+  text-align: center;
+  line-height: 1.2;
+  letter-spacing: 0;
+  overflow: hidden;
+  @include txt-en(700);
+  @include tab {
+    max-width: pc_vw(580);
+    height: pc_vw(90);
+    font-size: pc_vw(25);
+  }
+  @include pc {
+    max-width: 580px;
+    height: 90px;
+    font-size: 2.5rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transform: translateX(-100%);
+    transition: 0.2s;
+    border-color: transparent;
+    background-color: $color-black;
+    outline-color: transparent;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+  }
+  &:hover,
+  &:active {
+    // color: $color-white;
+    border-color: transparent;
+    outline-color: transparent;
+    .sub {
+      // color: $color-white;
+    }
+    &::before {
+      transform: translateX(0);
+    }
+  }
+}
+.c_btn-xs {
+  font-size: sp_vw(18);
+  letter-spacing: 0.02em;
+  height: sp_vw(57);
+  font-family: "Zen Kaku Gothic New", "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  @include tab {
+    height: pc_vw(57);
+    font-size: pc_vw(18);
+    max-width: pc_vw(320);
+    border-radius: pc_vw(10);
+  }
+  @include pc {
+    height: 57px;
+    font-size: 1.8rem;
+    max-width: 320px;
+    border-radius: 1rem;
+  }
+}
+// 小さめのボタン
+.c_btn-s {
+  font-size: sp_vw(20);
+  height: sp_vw(60);
+  @include tab {
+    height: pc_vw(57);
+    font-size: pc_vw(20);
+    max-width: pc_vw(320);
+  }
+  @include pc {
+    height: 57px;
+    font-size: 2rem;
+    max-width: 320px;
+  }
+}
+.c_btn-m {
+  height: sp_vw(80);
+  font-size: sp_vw(20);
+  @include tab {
+    height: pc_vw(90);
+    font-size: pc_vw(20);
+    max-width: pc_vw(580);
+  }
+  @include pc {
+    height: 90px;
+    font-size: 2rem;
+    max-width: 580px;
+  }
+}
+// 大きいボタン
+.c_btn-l {
+  height: sp_vw(110);
+  font-size: sp_vw(24);
+  max-width: 100%;
+  flex-flow: column;
+  letter-spacing: 0.05em;
+  @include tab {
+    font-size: pc_vw(40);
+    height: pc_vw(170);
+    font-size: pc_vw(40);
+    border-radius: pc_vw(20);
+  }
+  @include pc {
+    font-size: 4rem;
+    height: 170px;
+    font-size: 4rem;
+    border-radius: 2rem;
+  }
+  .sub {
+    display: block;
+    font-size: sp_vw(14);
+    margin-top: sp_vw(5);
+    letter-spacing: 0.02em;
+    @include tab {
+      margin-top: pc_vw(8);
+      font-size: pc_vw(18);
+    }
+    @include pc {
+      margin-top: 8px;
+      font-size: 1.8rem;
+    }
+  }
+}
+// 白ボタン
+.c_btn-white {
+  @extend .c_btn;
+  $btn-color: $color-white;
+  border-color: transparent;
+  outline-color: transparent;
+  color: $color-black;
+  &::after {
+    background-color: $btn-color;
+  }
+}
+// グレーボタン
+.c_btn-primary {
+  @extend .c_btn;
+  $btn-color: $gray-medium;
+  border-color: transparent;
+  outline-color: transparent;
+  color: $color-white;
+  &::after {
+    background-color: $btn-color;
+  }
+}
+// アクセントカラーボタン
+.c_btn-secondary {
+  @extend .c_btn;
+  $btn-color: $accent-color;
+  border-color: transparent;
+  outline-color: transparent;
+  color: $color-black;
+  &::after {
+    background-color: $btn-color;
+  }
+}
+.c_txt-btn {
+  @include txt-en(700);
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  @include tab {
+    font-size: pc_vw(20);
+  }
+  @include pc {
+    font-size: 2rem;
+  }
+  .txt {
+    font-size: sp_vw(18);
+    @include tab {
+      font-size: pc_vw(16);
+    }
+    @include pc {
+      font-size: 1.6rem;
+    }
+  }
+  &:hover,
+  &:active {
+    .txt {
+      color: $color-black;
+      text-decoration: underline;
+      text-decoration-color: $color-black;
+      text-decoration-style: solid;
+    }
+    .c_btn-arrow {
+      &:after {
+        border-color: $accent-color;
+        background-color: $accent-color;
+      }
+    }
+  }
+}
+.c_txtLinkArrow {
+  position: relative;
+  height: fit-content;
+  width: fit-content;
+  &::after {
+    position: absolute;
+    top: 40%;
+    right: -1em;
+    content: "";
+    width: 0.4em;
+    height: 0.4em;
+    border-top: 1px solid;
+    border-left: 1px solid;
+    transform: rotate(135deg);
+    display: inline-block;
+    @include tab {
+      display: block;
+    }
+  }
+}
+.c_btn-arrow {
+  $btnWidth: 60;
+  width: sp_vw($btnWidth);
+  height: sp_vw($btnWidth);
+  @include tab {
+    width: pc_vw($btnWidth);
+    height: pc_vw($btnWidth);
+  }
+  @include pc {
+    width: 60px;
+    height: 60px;
+  }
+  &::after {
+    content: "→";
+    font-size: sp_vw(20);
+    color: $color-black;
+    line-height: 1;
+    background-color: $color-white;
+    border-radius: 50%;
+    border: 1px solid;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include tab {
+      font-size: pc_vw(20);
+    }
+    @include pc {
+      font-size: 2rem;
+    }
+  }
+  &:hover,
+  &:active {
+    &:after {
+      border-color: $accent-color;
+      background-color: $accent-color;
+    }
+  }
+  &--s {
+    @extend .c_btn-arrow;
+    width: sp_vw(56);
+    height: sp_vw(56);
+    @include tab {
+      width: pc_vw(56);
+      height: pc_vw(56);
+    }
+    @include tab {
+      width: 56px;
+      height: 56px;
+    }
+  }
+}
+
+.c_btn-mail {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: $accent-color;
+  width: 80px;
+  height: 80px;
+  border-radius: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  transition: 0.4s;
+  font-size: 40px;
+
+  @include tab {
+    right: 50px;
+    bottom: 50px;
+  }
+  &:hover {
+    background-color: $accent-color-lighter;
+  }
+
+  .material-symbols-outlined {
+    font-size: 4rem;
+  }
+}

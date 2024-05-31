@@ -1,0 +1,160 @@
+.sel_wrap {
+  overflow: hidden;
+  position: relative;
+  @include tab {
+    overflow: inherit;
+  }
+}
+.sel_head {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  color: $color-white;
+  background-color: $color-txt;
+  font-size: sp_vw(16);
+  padding: sp_vw(10) sp_vw(30);
+  @include tab {
+    font-size: pc_vw(16);
+    padding: pc_vw(5) pc_vw(60);
+  }
+  @include pc {
+    font-size: 1.6rem;
+    padding: 5px 60px;
+  }
+  &:after {
+    content: "";
+    transform: rotate(-135deg);
+    width: 0.8em;
+    height: 0.8em;
+    border-top: 2px solid $color-white;
+    border-left: 2px solid $color-white;
+    position: absolute;
+    right: 5em;
+    top: 3.5em;
+    font-size: 0.4em;
+    z-index: 2;
+    @include tab {
+      top: 4em;
+    }
+  }
+  &.js-active {
+  }
+  &.open {
+    @include tab {
+    }
+    @include pc {
+    }
+    &:after {
+      transform: rotate(45deg);
+    }
+  }
+}
+.sel_box_wrap {
+  display: inline-block;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  transition: max-height 0.2s opacity 0.2s;
+  max-height: 0;
+  opacity: 0;
+  box-sizing: border-box;
+  @include tab {
+    position: absolute;
+    top: auto;
+  }
+  @include pc {
+  }
+  &.js-active {
+    opacity: 1;
+    max-height: 1000px;
+  }
+}
+.sel_box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  border: 1px solid;
+  li {
+    position: relative;
+    cursor: pointer;
+    background-color: #fff;
+
+    a {
+    }
+    &::before {
+      content: "";
+      width: sp_vw(10);
+      height: sp_vw(10);
+      background-color: $color-black;
+      position: absolute;
+      z-index: 1;
+      left: sp_vw(10);
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 0.4em;
+      opacity: 0;
+      transition: 0.1s ease;
+      @include tab {
+        left: pc_vw(30);
+        width: pc_vw(10);
+        height: pc_vw(10);
+      }
+      @include pc {
+        left: 30px;
+        width: 10px;
+        height: 10px;
+      }
+    }
+    &:hover,
+    &:active {
+      &::before {
+        opacity: 1;
+      }
+    }
+    &.active {
+      &::before {
+        opacity: 1;
+      }
+    }
+    a {
+      position: relative;
+      display: block;
+      font-size: sp_vw(16);
+      padding: sp_vw(5) sp_vw(30);
+      @include tab {
+        font-size: pc_vw(16);
+        padding: pc_vw(5) pc_vw(60);
+      }
+      @include pc {
+        font-size: 1.6rem;
+        padding: 5px 60px;
+      }
+      &:hover,
+      &:active {
+        color: $color-black;
+      }
+    }
+  }
+}
+.sel_item {
+  // position: relative;
+  &::before {
+    content: "●";
+    color: #2f2f2f;
+    position: absolute;
+    z-index: 1;
+    left: 2em;
+    top: 54%;
+    transform: translateY(-50%);
+    font-size: 0.4em;
+    display: none;
+  }
+  &:hover,
+  &:active {
+    &::before {
+      @include tab {
+        display: block;
+      }
+    }
+  }
+}

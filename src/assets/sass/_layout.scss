@@ -1,0 +1,511 @@
+/*------------------------------------*\
+    layout
+\*------------------------------------*/
+.globalInner {
+  margin: 0 auto;
+  padding: 0 sp_vw(25);
+  @include tab {
+    padding: 0;
+    max-width: $globalWidth;
+  }
+  @include pc {
+    max-width: 1010px;
+  }
+  &--s {
+    @extend .globalInner;
+    padding: 0;
+    @include tab {
+      max-width: pc_vw(858);
+    }
+    @include pc {
+      max-width: 858px;
+    }
+  }
+}
+.l_header {
+  position: relative;
+  z-index: 999;
+  &__wrap {
+    position: absolute;
+    top: 0;
+    display: flex;
+    width: 100%;
+    padding: sp_vw(16) sp_vw(22) sp_vw(10);
+    align-items: center;
+    justify-content: center;
+    background-color: $color-white;
+    @include tab {
+      padding: pc_vw(10) pc_vw(100);
+    }
+    @include pc {
+      padding: 10px 100px;
+    }
+  }
+  &__logo {
+    width: 60px;
+    @include tab {
+      width: 75px;
+    }
+  }
+  &__pc-menu {
+    display: flex;
+    gap: pc_vw(35);
+    @include txt-en(800);
+    @include pc {
+      gap: 35px;
+    }
+  }
+  &__pc-menu-item {
+    cursor: pointer;
+    position: relative;
+    font-size: pc_vw(22);
+    line-height: 1;
+    padding-bottom: pc_vw(15);
+    @include lg {
+      font-size: pc_vw(15);
+    }
+    @include pc {
+      font-size: 1.5rem;
+      padding-bottom: 15px;
+    }
+  }
+  .has_child {
+    position: relative;
+    @include tab {
+      margin-right: pc_vw(14);
+    }
+    @include pc {
+      margin-right: 14px;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: sp_vw(14);
+      height: sp_vw(2);
+      background-color: #fff;
+      @include tab {
+        background-color: $color-black;
+        top: pc_vw(10);
+        right: -1em;
+        width: pc_vw(12);
+        height: pc_vw(3);
+      }
+      @include lg {
+        top: pc_vw(5);
+      }
+      @include pc {
+        top: 5px;
+        width: 12px;
+        height: 3px;
+      }
+    }
+    &::after {
+      transition: all 0.2s ease;
+      transform: rotate(90deg);
+    }
+    .submenu {
+      /*絶対配置で位置を指定*/
+      position: absolute;
+      left: 0;
+      top: 30px;
+      z-index: 4;
+      background: #484848;
+      padding: 30px 20px;
+      border-radius: 1rem;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.2s ease;
+      a {
+        color: $color-white;
+        &:hover,
+        &:active {
+          color: $accent-color;
+        }
+      }
+    }
+    &:hover,
+    &:active {
+      color: $accent-color;
+      .submenu {
+        visibility: visible;
+        opacity: 1;
+        line-height: 2.6;
+        color: $color-white;
+        white-space: nowrap;
+      }
+      &::before,
+      &::after {
+        background-color: $accent-color;
+      }
+      &::after {
+        transform: rotate(0deg);
+      }
+    }
+  }
+  &__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    position: relative;
+    z-index: 9999;
+  }
+  &__gnav-btn {
+    display: inline-block;
+    .line {
+      display: inline-block;
+      content: "";
+      background: $color-black;
+      width: sp_vw(30);
+      height: sp_vw(2);
+      position: relative;
+      z-index: 103;
+      transition: all 0.2s ease;
+      &::before,
+      &::after {
+        content: "";
+        background: $color-black;
+        width: sp_vw(30);
+        height: sp_vw(2);
+        position: absolute;
+        transition: all 0.2s ease;
+        .js-active & {
+          background: $color-white;
+        }
+      }
+      &::before {
+        top: sp_vw(-10);
+        .js-active & {
+          top: 0;
+          transform: rotate(30deg);
+        }
+      }
+      &::after {
+        top: sp_vw(10);
+        .js-active & {
+          top: 0;
+          transform: rotate(-30deg);
+        }
+      }
+    }
+  }
+  &__gnav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 9998;
+    top: 0;
+    right: -100%;
+    background: $color-black;
+    transition: 0.4s ease;
+    padding: 100px 35px;
+    overflow-y: auto;
+    &.js-active {
+      right: 0;
+    }
+  }
+  &__gnav-logo {
+    display: inline-block;
+    margin-bottom: sp_vw(43);
+    @include logoWidth();
+  }
+  &__gnav-menu {
+    font-size: sp_vw(15);
+    color: $color-white;
+    a {
+      color: $color-white;
+    }
+    .gnav-submenu {
+      opacity: 0;
+      transition: 0.2s ease;
+      max-height: 0;
+      overflow: hidden;
+      margin: 0 0 0 sp_vw(40);
+      &.js-active {
+        opacity: 1;
+        margin: sp_vw(25) 0 0 sp_vw(40);
+        max-height: sp_vw(500);
+      }
+      li {
+        margin-bottom: sp_vw(15);
+        font-size: sp_vw(13);
+      }
+    }
+  }
+  &__gnav-list {
+    margin-bottom: sp_vw(40);
+    letter-spacing: 0.2em;
+  }
+  .gnav-has_child {
+    position: relative;
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      width: sp_vw(14);
+      height: sp_vw(2);
+      background-color: #fff;
+      top: 1em;
+      right: 0;
+    }
+    &::after {
+      transition: all 0.2s ease;
+      transform: rotate(90deg);
+    }
+    &.js-active {
+      &::after {
+        transform: rotate(180deg);
+      }
+    }
+  }
+  &__gnav-btn-link {
+    font-size: sp_vw(15);
+    letter-spacing: 0.2em;
+  }
+  &__gnav-txt-link {
+    margin-top: sp_vw(30);
+    font-size: sp_vw(10);
+    li {
+      margin-bottom: 0.4em;
+    }
+    a {
+      font-family: "Noto Sans JP", sans-serif;
+      color: $color-white;
+    }
+  }
+}
+.l_contact {
+  padding: sp_vw(165) 0 sp_vw(45);
+  background-color: $color-white;
+  position: relative;
+  z-index: 1;
+  @include tab {
+    padding: pc_vw(73) 0;
+  }
+  @include pc {
+    padding: 73px 0;
+  }
+  &::before {
+    position: absolute;
+    top: 0;
+    z-index: -2;
+    content: "";
+    width: 100%;
+    height: 100%;
+    // background: url(../../img/neon_03_sp.png) center top / cover no-repeat;
+    @include tab {
+      // background-image: url(../../img/neon_03_pc.png);
+      background-size: cover;
+      background-position: 100% auto;
+    }
+  }
+  &::after {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.2;
+  }
+  &__txt {
+    margin-bottom: sp_vw(52);
+    text-align: center;
+    font-size: sp_vw(14);
+    @include tab {
+      font-size: pc_vw(14);
+      margin-bottom: pc_vw(52);
+    }
+    @include pc {
+      font-size: 1.4rem;
+      margin-bottom: 52px;
+    }
+  }
+}
+.l_footer {
+  background-color: $color-black;
+  padding: sp_vw(20) 0 sp_vw(28);
+  position: relative;
+  z-index: 1;
+  @include tab {
+    padding: pc_vw(20) 0 pc_vw(20);
+    margin-top: 80px;
+  }
+  @include pc {
+    padding: 20px 35px;
+    margin-top: 120px;
+  }
+  .page-top {
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    right: sp_vw(30);
+    top: sp_vw(52);
+    width: sp_vw(55);
+    height: sp_vw(55);
+    content: "";
+    // background: url(../../img/common/page-top.svg) center / 90% no-repeat;
+    @include tab {
+      width: pc_vw(82);
+      height: pc_vw(82);
+      right: pc_vw(69);
+      top: pc_vw(-92);
+    }
+    @include pc {
+      width: 82px;
+      height: 82px;
+      right: 69px;
+      top: -92px;
+    }
+    &:hover,
+    &:active {
+      @include tab {
+        // background-image: url(../../img/common/page-top-hover.svg);
+      }
+    }
+  }
+  a {
+    color: $color-white;
+    &:hover,
+    &:active {
+      color: $accent-color;
+    }
+  }
+  &__inner {
+    padding: 0 sp_vw(30);
+    @include tab {
+      padding: 0;
+    }
+  }
+  &__logo {
+    margin-bottom: sp_vw(55);
+    margin-left: sp_vw(-8);
+    @include logoWidth();
+    @include tab {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: pc_vw(40);
+    }
+    @include pc {
+      margin-bottom: 40px;
+    }
+    a {
+      display: block;
+    }
+  }
+  &__menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: sp_vw(20) 0;
+    @include tab {
+      display: flex;
+      justify-content: center;
+      gap: pc_vw(43);
+    }
+    @include pc {
+      gap: 43px;
+    }
+  }
+  &__item {
+    @include txt-en(700);
+    color: $color-white;
+    font-size: sp_vw(15);
+    @include tab {
+      font-size: pc_vw(15);
+      display: flex;
+    }
+    @include pc {
+      font-size: 1.5rem;
+    }
+    .submenu {
+      font-size: sp_vw(13);
+      margin-top: sp_vw(15);
+      @include tab {
+        font-size: pc_vw(13);
+        margin-top: pc_vw(2);
+      }
+      @include pc {
+        font-size: 1.3rem;
+        margin-top: 2px;
+      }
+      li {
+        position: relative;
+        padding-left: 1em;
+        margin-bottom: 0.3em;
+        @include tab {
+          padding-left: 2em;
+        }
+        &::before {
+          position: absolute;
+          top: 1em;
+          left: -0.4em;
+          content: "";
+          height: 1px;
+          width: 0.75em;
+          background-color: $gray-darker;
+          @include tab {
+            top: 47%;
+            left: 0.6em;
+          }
+        }
+      }
+    }
+  }
+  &__btn {
+    border-top: 1px solid #707070;
+    padding-top: sp_vw(25);
+    margin-top: sp_vw(50);
+    @include tab {
+      padding-top: pc_vw(35);
+      margin-top: pc_vw(55);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+    @include pc {
+      padding-top: 35px;
+      margin-top: 55px;
+    }
+  }
+  &__btn-link {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    font-size: sp_vw(10);
+    padding-bottom: sp_vw(13);
+    font-family: "Noto Sans JP", sans-serif;
+    @include tab {
+      font-size: pc_vw(11);
+      padding-bottom: 0;
+    }
+    @include pc {
+      font-size: 1.1rem;
+    }
+  }
+  &__copy {
+    color: $color-white;
+    text-align: center;
+    font-size: sp_vw(10);
+    @include txt-en(500);
+    @include tab {
+      font-size: pc_vw(11);
+    }
+    @include pc {
+      font-size: 1.1rem;
+    }
+  }
+}
+.l_hash {
+  padding-top: sp_vw(100);
+  margin-top: sp_vw(-100);
+  @include tab {
+    padding-top: pc_vw(150);
+    margin-top: pc_vw(-150);
+  }
+  @include pc {
+    padding-top: 150px;
+    margin-top: -150px;
+  }
+}
