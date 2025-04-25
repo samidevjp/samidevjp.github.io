@@ -20,16 +20,16 @@
   &--0 {
     margin-bottom: 0 !important;
   }
-  &--s{
-    margin-bottom: 20px!important;
-    @include tab{
-      margin-bottom: 40px!important;
+  &--s {
+    margin-bottom: 20px !important;
+    @include tab {
+      margin-bottom: 40px !important;
     }
   }
-  &--m{
-    margin-bottom: 80px!important;
-    @include tab{
-      margin-bottom: 100px!important;
+  &--m {
+    margin-bottom: 80px !important;
+    @include tab {
+      margin-bottom: 100px !important;
     }
   }
 }
@@ -37,6 +37,9 @@
   &--full {
     width: 100% !important;
   }
+}
+.u_txt--gray {
+  color: #666 !important;
 }
 .u_txt-hover {
   text-decoration-line: underline;
@@ -67,7 +70,7 @@
       font-size: 1.6rem;
     }
   }
-   &--s {
+  &--s {
     font-size: sp_vw(12);
     line-height: 2.4;
     @include tab {
@@ -86,7 +89,7 @@
       font-size: 3.3rem;
     }
   }
-  &--small-bottom{
+  &--small-bottom {
     vertical-align: sub;
     font-size: 0.85em;
     position: relative;
@@ -146,10 +149,10 @@
   }
 }
 
-.u_hover-opacity{
+.u_hover-opacity {
   opacity: 1;
   &:hover,
-  &:active{
+  &:active {
     opacity: 0.8;
   }
 }

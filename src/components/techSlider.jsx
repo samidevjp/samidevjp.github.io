@@ -1,6 +1,7 @@
 import React from "react";
 import Slider from "react-slick";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 const TechSlider = ({ slides }) => {
   const settings = {
     dots: true,
@@ -15,10 +16,12 @@ const TechSlider = ({ slides }) => {
     <div className="p_slider">
       <Slider {...settings}>
         {slides.map((slide, index) => (
-          <div key={index} className="">
-            <img src={slide.img} alt={slide.title} className="u_mb--40" />
-            <p className="">{slide.title}</p>
-            <p className="u_txt--s">{slide.lead}</p>
+          <div key={index} className="p_slider__item">
+            <img src={slide.img} alt={slide.title} />
+            <div className="p_slider__cap">
+              <p className="u_txt--gray">{slide.title}</p>
+              <p className="u_txt--s u_txt--gray">{slide.lead}</p>
+            </div>
           </div>
         ))}
       </Slider>

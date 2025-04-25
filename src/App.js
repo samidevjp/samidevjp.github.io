@@ -1,6 +1,4 @@
 import "./assets/css/tailwind.css";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import "./assets/sass/style.scss";
 
 import ProfileSection from "./components/prof";
@@ -20,7 +18,8 @@ import widgetSetting from "./assets/images/widget-setting.png";
 import flowControl from "./assets/images/flow-control.png";
 import specialDay from "./assets/images/special-day.png";
 import subscription from "./assets/images/subscription.png";
-
+import wabify from "./assets/images/wabify.png";
+import widget from "./assets/images/widget.png";
 const slides = [
   {
     title: "Team Management Dashboard",
@@ -35,7 +34,6 @@ const slides = [
   {
     title: "Employee Timesheets",
     lead: "Track employee clock-ins and clock-outs, calculate total hours and wages, and approve or edit entries with ease.",
-
     img: timesheet,
   },
   {
@@ -83,24 +81,87 @@ function App() {
         </div>
       </section>
       <div className="globalInner">
-        <Heading titleEn="ABOUT" titleJp="プロフィール" />
+        <Heading
+          titleEn="ABOUT"
+          titleJp="Creating clean, functional, and beautiful web experiences."
+        />
       </div>
       <ProfileSection />
 
       <div className="pg_works">
         <div className="pg_works__inner">
           <div className="globalInner">
-            <Heading titleEn="WORKS" titleJp="制作実績" />
-            <h2 className="p_sec__ttl--xs">Programming × UI/UX</h2>
-            <p>
-              React / TypeScript / Tailwind CSS / REST API / Next.js / Stripe
-              API / POS system
-              <br />I was involved in everything from design to implementation,
-              building reusable components and ensuring maintainable UI
-              architecture.
-            </p>
-            <div className="u_mb--80">
-              <TechSlider slides={slides} />
+            <Heading
+              titleEn="WORKS"
+              titleJp="A selection of recent design and development work."
+            />
+            <div style={{ marginBottom: "180px" }}>
+              <div className="u_mb--m">
+                <h2 className="p_sec__ttl--xs">
+                  Programming × UI/UX At Wabify
+                </h2>
+                <p>
+                  React / TypeScript / Tailwind CSS / REST API / Next.js /
+                  Stripe API / POS system
+                  <br />I was involved in everything from design to
+                  implementation, building reusable components and ensuring
+                  maintainable UI architecture. At <strong>Wabify</strong>, I
+                  played a key role in developing a modern booking system and
+                  its official landing page—handling the entire front-end
+                  including UI/UX direction, implementation, and dashboard
+                  integration.
+                </p>
+              </div>
+              <div
+                className="u_mb--80"
+                style={{ maxWidth: "800px", margin: "0 auto" }}
+              >
+                <TechSlider slides={slides} />
+              </div>
+
+              <a
+                className="p_card-m u_mb--s"
+                style={{ display: "block" }}
+                href="https://wabify.com/"
+                target="_blank"
+              >
+                <div className="p_card-m__inner">
+                  <div className="p_card-m__img">
+                    <img src={wabify} alt="" />
+                  </div>
+                  <div className="p_card-m__cap">
+                    <h3 className="p_card-m__ttl">
+                      Wabify Official Landing Page
+                    </h3>
+                    <p>
+                      I directed, designed, and implemented the entire landing
+                      page for Wabify. This page introduces the product’s core
+                      features and have a contact page.
+                    </p>
+                  </div>
+                </div>
+              </a>
+              <a
+                className="p_card-m"
+                href="https://widget-staging.wabify.com/v2/67d25d091b48a1741839625"
+                target="_blank"
+              >
+                <div className="p_card-m__inner">
+                  <div className="p_card-m__img">
+                    <img src={widget} alt="" />
+                  </div>
+                  <div className="p_card-m__cap">
+                    <h3 className="p_card-m__ttl">Booking System Widget</h3>
+                    <p>
+                      I built a fully functional booking widget that lets users
+                      select time slots and make reservations, all synced with
+                      the admin dashboard. I was responsible for the entire
+                      front-end, including widget UI, time slot display,
+                      reservation flow, and dashboard integration.
+                    </p>
+                  </div>
+                </div>
+              </a>
             </div>
             <h2 className="p_sec__ttl--xs">Website Projects</h2>
             <p>
