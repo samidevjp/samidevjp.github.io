@@ -1,13 +1,67 @@
-import logo from "./logo.svg";
+import "./assets/css/tailwind.css";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "./assets/sass/style.scss";
-// import './App.css';
+
 import ProfileSection from "./components/prof";
-import TtlSection from "./components/workttl";
-import LeadSection from "./components/worklead";
+import Heading from "./components/heading";
 import WorkList from "./components/worklist";
+import TechSlider from "./components/techSlider";
 import { IoMailOutline } from "react-icons/io5";
 import { RiBug2Line } from "react-icons/ri";
+// Images
+import placeholder from "./assets/images/placeholder-614.png";
+import team from "./assets/images/team.png";
+import roster from "./assets/images/roster.png";
+import roster2 from "./assets/images/roster-2.png";
+import timesheet from "./assets/images/timesheet.png";
+import requestAvailability from "./assets/images/request-availability.png";
+import widgetSetting from "./assets/images/widget-setting.png";
+import flowControl from "./assets/images/flow-control.png";
+import specialDay from "./assets/images/special-day.png";
+import subscription from "./assets/images/subscription.png";
 
+const slides = [
+  {
+    title: "Team Management Dashboard",
+    lead: "Easily view and manage all your staff members, their roles, job types, contracts, and performance levels at a glance.",
+    img: team,
+  },
+  {
+    title: "Weekly Roster Planning",
+    lead: "Assign, update, or review shifts for your team members. Track availability, time-off requests, and total hours per week.",
+    img: roster,
+  },
+  {
+    title: "Employee Timesheets",
+    lead: "Track employee clock-ins and clock-outs, calculate total hours and wages, and approve or edit entries with ease.",
+
+    img: timesheet,
+  },
+  {
+    title: "Customize and Manage Your Booking Widget",
+    lead: "Set your branding with images, logo, and colors to match your restaurant’s identity. Preview how your widget will look to customers.",
+
+    img: widgetSetting,
+  },
+  {
+    title: "Flow Control Settings",
+    lead: "Configure unique service flows for each day. Manage late-night or lunch services with individual settings and visuals.",
+
+    img: flowControl,
+  },
+  {
+    title: "Special Days Settings",
+    lead: "Set and customize public holidays or unique events. Adjust shift timings and open/closed status per day.",
+
+    img: specialDay,
+  },
+  {
+    title: "Subscription Summary & Status",
+    lead: "View your current subscription plan, track payment history, and manage upgrades, cancellations, or refunds in one place.",
+    img: subscription,
+  },
+];
 function App() {
   return (
     <>
@@ -28,13 +82,33 @@ function App() {
           </h1>
         </div>
       </section>
+      <div className="globalInner">
+        <Heading titleEn="ABOUT" titleJp="プロフィール" />
+      </div>
       <ProfileSection />
 
       <div className="pg_works">
         <div className="pg_works__inner">
           <div className="globalInner">
-            <TtlSection />
-            <LeadSection />
+            <Heading titleEn="WORKS" titleJp="制作実績" />
+            <h2 className="p_sec__ttl--xs">Programming × UI/UX</h2>
+            <p>
+              React / TypeScript / Tailwind CSS / REST API / Next.js / Stripe
+              API / POS system
+              <br />I was involved in everything from design to implementation,
+              building reusable components and ensuring maintainable UI
+              architecture.
+            </p>
+            <div className="u_mb--80">
+              <TechSlider slides={slides} />
+            </div>
+            <h2 className="p_sec__ttl--xs">Website Projects</h2>
+            <p>
+              These website projects reflect my earlier work, mainly using
+              WordPress and jQuery. They demonstrate my foundation in front-end
+              development and visual design, which has since evolved into more
+              modern frameworks and UI/UX-focused solutions.
+            </p>
             <WorkList />
           </div>
         </div>

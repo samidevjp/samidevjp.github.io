@@ -4,11 +4,6 @@ const ProfileSection = () => {
   return (
     <section className="prof">
       <div className="globalInner">
-        <div className="p_pg-head">
-          <h1 className="main">ABOUT</h1>
-          <p className="sub">プロフィール</p>
-        </div>
-
         <div className="prof__body">
           <div className="profDesc">
             <div className="profImg">
@@ -29,12 +24,11 @@ const ProfileSection = () => {
                 Hello! My name is Asami Okamoto. Thank you for browsing my
                 portfolio Site.
               </p>
-              <h2 className="p_sec__ttl--xs">SKILL</h2>
-
+              <h2 className="p_sec__ttl--xs">SKILLS</h2>
               <p>
-                HTML / CSS / Bootstrap / Sass / JavaScript / TypeScript /
-                Node.js / jQuery / WordPress / PHP / Vue.js / React.js / Adobe (
-                Illustrator, Photoshop, XD, premiere Pro, After Effect )
+                React / JavaScript / TypeScript / UI/UX Design / Node.js /
+                WordPress / PHP / Bootstrap / Sass / Figma / Adobe Creative
+                Suite (Illustrator, Photoshop, XD, Premiere Pro, After Effects)
               </p>
             </div>
           </div>
@@ -42,14 +36,19 @@ const ProfileSection = () => {
             <h2 className="p_sec__ttl--xs">SUMMARY</h2>
 
             <p>
-              A web developer with 5 years of experience, known for designing
-              and implementing sites with meticulous attention to detail and
-              ease of communication. Strong in structuring directories and files
-              for easy maintenance by anyone. Aiming to advance to the next
-              career step by creating globally understandable files and
-              achieving highly aesthetic front-end designs. Values careful and
-              prompt communication with the team. Passionate about diving into
-              new environments and embracing new opportunities.
+              A web developer with 5 years of experience, specializing in
+              React-based front-end development. At Wabify, a
+              hospitality-focused software company in Australia, I served as the
+              UI/UX Head Designer, leading website projects from direction to
+              implementation. I played a central role in proposing and designing
+              new features, contributing across UI/UX, programming, and project
+              direction. Skilled in building clean, scalable, and maintainable
+              React applications with a focus on intuitive user experiences and
+              aesthetic design. Now aiming to take the next step in my career by
+              leveraging my combined experience in design, development, and
+              leadership to contribute to globally impactful projects.
+              Passionate about clear communication, team collaboration, and
+              taking on new challenges.
             </p>
 
             <p>

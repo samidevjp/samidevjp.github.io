@@ -71,6 +71,21 @@
     font-size: 1.4rem;
   }
 }
+.p-ttl-sub {
+  font-weight: 700;
+  font-size: sp_vw(20);
+  line-height: 1.2;
+  letter-spacing: 0.05em;
+  margin-bottom: sp_vw(10);
+  @include tab {
+    font-size: pc_vw(20);
+    margin-bottom: pc_vw(15);
+  }
+  @include pc {
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+}
 .p_ttl {
   margin-bottom: sp_vw(30);
   @include tab {
@@ -631,4 +646,6 @@
       }
     }
   }
+}
+.p_slider {
 }
