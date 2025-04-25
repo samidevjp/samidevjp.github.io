@@ -1,6 +1,5 @@
 import "./assets/css/tailwind.css";
 import "./assets/sass/style.scss";
-
 import ProfileSection from "./components/prof";
 import Heading from "./components/heading";
 import WorkList from "./components/worklist";
@@ -39,19 +38,16 @@ const slides = [
   {
     title: "Customize and Manage Your Booking Widget",
     lead: "Set your branding with images, logo, and colors to match your restaurant’s identity. Preview how your widget will look to customers.",
-
     img: widgetSetting,
   },
   {
     title: "Flow Control Settings",
     lead: "Configure unique service flows for each day. Manage late-night or lunch services with individual settings and visuals.",
-
     img: flowControl,
   },
   {
     title: "Special Days Settings",
     lead: "Set and customize public holidays or unique events. Adjust shift timings and open/closed status per day.",
-
     img: specialDay,
   },
   {
@@ -87,7 +83,6 @@ function App() {
         />
       </div>
       <ProfileSection />
-
       <div className="pg_works">
         <div className="pg_works__inner">
           <div className="globalInner">
@@ -118,7 +113,6 @@ function App() {
               >
                 <TechSlider slides={slides} />
               </div>
-
               <a
                 className="p_card-m u_mb--s"
                 style={{ display: "block" }}
@@ -174,7 +168,6 @@ function App() {
           </div>
         </div>
       </div>
-
       <footer className="l_footer">
         <p className="l_footer__copy">
           Copyright © Asami Okamoto All rights reserved.
@@ -183,5 +176,4 @@ function App() {
     </>
   );
 }
-
 export default App;
