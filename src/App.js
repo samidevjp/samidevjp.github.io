@@ -125,7 +125,7 @@ function App() {
               titleEn="WORKS"
               titleJp="A selection of recent design and development work."
             />
-            <div style={{ marginBottom: "180px" }}>
+            <div style={{ marginBottom: "200px" }}>
               <div className="u_mb--m">
                 <h2 className="p_sec__ttl--xs">UI / UX</h2>
                 <p>
