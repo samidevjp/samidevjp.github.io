@@ -6,19 +6,54 @@ import WorkList from "./components/worklist";
 import TechSlider from "./components/techSlider";
 import { IoMailOutline } from "react-icons/io5";
 import { RiBug2Line } from "react-icons/ri";
-// Images
+// Programming Images
 import placeholder from "./assets/images/placeholder-614.png";
 import team from "./assets/images/team.png";
 import roster from "./assets/images/roster.png";
 import roster2 from "./assets/images/roster-2.png";
 import timesheet from "./assets/images/timesheet.png";
-import requestAvailability from "./assets/images/request-availability.png";
 import widgetSetting from "./assets/images/widget-setting.png";
 import flowControl from "./assets/images/flow-control.png";
 import specialDay from "./assets/images/special-day.png";
 import subscription from "./assets/images/subscription.png";
 import wabify from "./assets/images/wabify.png";
 import widget from "./assets/images/widget.png";
+// Design Images
+import designDashboard from "./assets/images/design-dashboard.png";
+import designLogin from "./assets/images/design-login.png";
+import designSignup from "./assets/images/design-signup.png";
+import designMod from "./assets/images/design-mod.png";
+import designItem from "./assets/images/design-item.png";
+
+const designSlides = [
+  {
+    title: "Dashboard",
+    lead: "A streamlined admin dashboard designed for intuitive navigation and quick access to essential business tools. Ensures a cohesive, accessible layout for efficient daily operations.",
+    img: designDashboard,
+  },
+  {
+    title: "Login",
+    lead: "A clean and secure login interface with clear feedback for incorrect credentials. Designed to provide a smooth entry point while maintaining brand consistency.",
+    img: designLogin,
+  },
+  {
+    title: "Signup",
+    lead: "A guided sign-up flow with progress indicators and minimal distractions, making onboarding fast and user-friendly for new businesses.",
+    img: designSignup,
+  },
+  {
+    title: "Modifiers",
+    lead: "An organized POS modifier selection screen that groups options logically, helping staff customize orders quickly and accurately during service.",
+
+    img: designMod,
+  },
+  {
+    title: "Item",
+    lead: "A detailed item management page where businesses can edit product details, adjust availability, and manage pricing in real-time.",
+
+    img: designItem,
+  },
+];
 const slides = [
   {
     title: "Team Management Dashboard",
@@ -92,9 +127,27 @@ function App() {
             />
             <div style={{ marginBottom: "180px" }}>
               <div className="u_mb--m">
-                <h2 className="p_sec__ttl--xs">
-                  Programming × UI/UX At Wabify
-                </h2>
+                <h2 className="p_sec__ttl--xs">UI / UX</h2>
+                <p>
+                  A collection of interface designs crafted for a
+                  hospitality-focused SaaS platform, covering both
+                  customer-facing and admin experiences. From login flows and
+                  onboarding screens to POS item management and modifiers, each
+                  design emphasizes usability, clarity, and consistent branding
+                  to support efficient business operations. The UI/UX was
+                  strategically designed with a responsive approach, ensuring an
+                  optimal and consistent experience across smartphones, tablets,
+                  and desktops.
+                </p>
+              </div>
+              <div
+                className="u_mb--80"
+                style={{ maxWidth: "800px", margin: "0 auto" }}
+              >
+                <TechSlider slides={designSlides} />
+              </div>
+              <div className="u_mb--m">
+                <h2 className="p_sec__ttl--xs">Programming</h2>
                 <p>
                   React / TypeScript / Tailwind CSS / REST API / Next.js /
                   Stripe API / POS system
