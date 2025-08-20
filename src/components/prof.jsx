@@ -1,4 +1,5 @@
 import React from "react";
+import profImage from "../assets/images/prof/prof.jpg";
 
 const ProfileSection = () => {
   return (
@@ -12,11 +13,9 @@ const ProfileSection = () => {
                 decoding="async"
                 width="300"
                 height="300"
-                src="https://okamotoasami.com/wp/wp-content/uploads/2023/11/IMG_20201227_173418_128-300x300.jpg"
+                src={profImage}
                 alt=""
                 className="wp-image-43"
-                srcSet="https://okamotoasami.com/wp/wp-content/uploads/2023/11/IMG_20201227_173418_128-300x300.jpg 300w, https://okamotoasami.com/wp/wp-content/uploads/2023/11/IMG_20201227_173418_128-150x150.jpg 150w, https://okamotoasami.com/wp/wp-content/uploads/2023/11/IMG_20201227_173418_128-768x768.jpg 768w, https://okamotoasami.com/wp/wp-content/uploads/2023/11/IMG_20201227_173418_128.jpg 942w"
-                sizes="(max-width: 300px) 100vw, 300px"
               />
             </div>
             <div className="profLead">
