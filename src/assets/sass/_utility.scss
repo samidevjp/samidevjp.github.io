@@ -126,6 +126,15 @@
       margin-bottom: 80px;
     }
   }
+  &--120 {
+    margin-bottom: sp_vw(120) !important;
+    @include tab {
+      margin-bottom: pc_vw(120) !important;
+    }
+    @include pc {
+      margin-bottom: 120px;
+    }
+  }
 }
 
 .u_txt-link {

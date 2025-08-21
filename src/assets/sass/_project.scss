@@ -728,7 +728,7 @@
     }
   }
   .slick-dots {
-    bottom: -35px;
+    bottom: 0px;
   }
 
   &__item {
@@ -740,14 +740,12 @@
       height: auto;
       display: block;
       border: 1px solid $gray-lightest;
-      // border-radius: 20px;
+
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
     }
   }
 
   &__cap {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid $gray-lightest;
+    margin-top: 20px;
   }
 }

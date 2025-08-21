@@ -246,7 +246,7 @@ function App() {
         <div className="pg_works__inner">
           <div className="globalInner">
             <Heading titleEn="WORKS" titleJp={t.works} />
-            <div style={{ marginBottom: "200px" }}>
+            <div className="u_mb--120">
               <div className="u_mb--s">
                 <h2 className="p_sec__ttl--xs">UI / UX</h2>
                 <p
@@ -256,7 +256,7 @@ function App() {
                 ></p>
               </div>
               <div
-                className="u_mb--80"
+                className="u_mb--120"
                 style={{ maxWidth: "800px", margin: "0 auto" }}
               >
                 <TechSlider slides={localizedDesignSlides} />
