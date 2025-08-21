@@ -41,16 +41,16 @@
   }
 }
 .p_pg-head {
-  padding: sp_vw(80) 0 sp_vw(20);
+  padding: sp_vw(60) 0 sp_vw(20);
   margin-bottom: sp_vw(40);
   border-bottom: 1px solid #595959;
   @include tab {
-    padding: pc_vw(180) 0 pc_vw(70);
-    margin-bottom: pc_vw(120);
+    padding: pc_vw(100) 0 pc_vw(40);
+    margin-bottom: pc_vw(80);
   }
   @include pc {
-    padding: 180px 0 70px;
-    margin-bottom: 120px;
+    padding: 100px 0 40px;
+    margin-bottom: 80px;
   }
   .main {
     font-size: 3.4rem;
@@ -261,18 +261,19 @@
       font-size: 1.8rem;
       letter-spacing: 0.05em;
       line-height: 1.4;
-
-      margin-bottom: 10px;
+      font-weight: 800;
+      margin-bottom: 15px;
       left: -55px;
       gap: 20px;
       @include tab {
         font-size: 1.8rem;
-        padding-left: 25px;
+        padding-left: 30px;
         left: auto;
+        margin-bottom: 20px;
       }
       @include pc {
-        font-size: 1.8rem;
-        gap: 20px;
+        font-size: 2rem;
+        gap: 25px;
       }
       &::before {
         width: 15px;

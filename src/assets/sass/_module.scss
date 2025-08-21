@@ -68,10 +68,10 @@
   }
   .p_pg-head {
     @include tab {
-      margin-bottom: pc_vw(90);
+      margin-bottom: pc_vw(60);
     }
     @include pc {
-      margin-bottom: 90px;
+      margin-bottom: 60px;
     }
   }
   &__ttl {
@@ -83,11 +83,11 @@
     @include tab {
       font-size: pc_vw(33);
       margin-top: 0;
-      margin-bottom: pc_vw(102);
+      margin-bottom: pc_vw(80);
     }
     @include pc {
       font-size: 3.3rem;
-      margin-bottom: 102px;
+      margin-bottom: 80px;
     }
   }
   // &__select-box {
