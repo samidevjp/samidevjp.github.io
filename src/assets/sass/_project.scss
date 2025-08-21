@@ -714,7 +714,6 @@
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   .slick-slider,
   .slick-list,
   .slick-track {
@@ -733,7 +732,6 @@
   }
 
   &__item {
-    border: 1px solid $gray-lightest;
     border-radius: 10px;
     padding: 20px;
 
@@ -741,12 +739,15 @@
       width: 100%;
       height: auto;
       display: block;
+      border: 1px solid $gray-lightest;
+      // border-radius: 20px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
     }
   }
 
   &__cap {
-    margin-top: 10px;
-    padding-top: 10px;
+    margin-top: 40px;
+    padding-top: 20px;
     border-top: 1px solid $gray-lightest;
   }
 }
