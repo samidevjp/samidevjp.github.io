@@ -331,11 +331,9 @@
   z-index: 1;
   @include tab {
     padding: pc_vw(20) 0 pc_vw(20);
-    margin-top: 80px;
   }
   @include pc {
     padding: 20px 35px;
-    margin-top: 120px;
   }
   .page-top {
     cursor: pointer;

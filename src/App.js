@@ -4,6 +4,7 @@ import ProfileSection from "./components/prof";
 import Heading from "./components/heading";
 import WorkList from "./components/worklist";
 import TechSlider from "./components/techSlider";
+import SocialSection from "./components/SocialSection";
 import { IoMailOutline } from "react-icons/io5";
 import { RiBug2Line } from "react-icons/ri";
 // Programming Images
@@ -22,6 +23,7 @@ import designLogin from "./assets/images/design-login.png";
 import designSignup from "./assets/images/design-signup.png";
 import designMod from "./assets/images/design-mod.png";
 import designItem from "./assets/images/design-item.png";
+import figmaMobile from "./assets/images/figma-mobile.png";
 
 const copy = {
   jp: {
@@ -48,6 +50,8 @@ const copy = {
       "迅速かつ正確に注文をとれるような、コンテクストを重視してPOSのアドオン選択画面を設計しました。",
     designItem:
       "事業者がリアルタイムで商品詳細の編集、在庫状況の調整、価格管理を行える商品管理ページを設計しました。",
+    figmaMobile: "モバイル向けのデザインをFigmaで作成しました。",
+
     teamManagement: "従業員管理ダッシュボード",
     teamManagementLead:
       "スタッフ全員の役割、職種、契約形態、パフォーマンスレベルを一覧で簡単に表示・管理できます。",
@@ -94,6 +98,7 @@ const copy = {
       "An organized POS modifier selection screen that groups options logically, helping staff customize orders quickly and accurately during service.",
     designItem:
       "A detailed item management page where businesses can edit product details, adjust availability, and manage pricing in real-time.",
+    figmaMobile: "A mobile-friendly design created in Figma.",
     teamManagement: "Team Management Dashboard",
     teamManagementLead:
       "Easily view and manage all your staff members, their roles, job types, contracts, and performance levels at a glance.",
@@ -139,6 +144,10 @@ const designSlides = [
     title: "Item",
     img: designItem,
   },
+  {
+    title: "Mobile",
+    img: figmaMobile,
+  },
 ];
 const slides = [
   {
@@ -182,6 +191,7 @@ function App() {
       Signup: "designSignup",
       Modifiers: "designModifiers",
       Item: "designItem",
+      Mobile: "figmaMobile",
     };
     return { ...slide, lead: t[keyMap[slide.title]] };
   });
@@ -214,9 +224,6 @@ function App() {
 
   return (
     <>
-      <a href="mailto:linyashamei@gmail.com" className="c_btn-mail mailtoui">
-        <IoMailOutline />
-      </a>
       <section className="kv">
         <div className="globalInner">
           <h1 className="kv__ttl">
@@ -318,6 +325,9 @@ function App() {
           </div>
         </div>
       </div>
+
+      <SocialSection />
+
       <footer className="l_footer">
         <p className="l_footer__copy">
           Copyright © Asami Okamoto All rights reserved.
