@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.35df0280.css",
-    "main.js": "/static/js/main.99f79259.js",
+    "main.js": "/static/js/main.0b539adc.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/widget.png": "/static/media/widget.a5a525d28478d3076fee.png",
     "static/media/merpay.png": "/static/media/merpay.988cc966f8b68aeb6731.png",
@@ -28,11 +28,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.35df0280.css.map": "/static/css/main.35df0280.css.map",
-    "main.99f79259.js.map": "/static/js/main.99f79259.js.map",
+    "main.0b539adc.js.map": "/static/js/main.0b539adc.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.35df0280.css",
-    "static/js/main.99f79259.js"
+    "static/js/main.0b539adc.js"
   ]
 }
