@@ -7,7 +7,7 @@ export default function SocialSection() {
         <h2 className="text-2xl font-bold mb-6">Connect with me</h2>
         <div className="flex justify-center text-5xl">
           <a
-            href="https://www.linkedin.com/in/your-linkedin-id"
+            href="https://www.linkedin.com/in/samidevjp/"
             target="_blank"
             rel="noreferrer"
             className="hover:text-blue-600 transition-colors"
