@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6043e663.css",
-    "main.js": "/static/js/main.7e70fcf0.js",
+    "main.css": "/static/css/main.35df0280.css",
+    "main.js": "/static/js/main.99f79259.js",
     "static/js/453.1407b060.chunk.js": "/static/js/453.1407b060.chunk.js",
     "static/media/widget.png": "/static/media/widget.a5a525d28478d3076fee.png",
     "static/media/merpay.png": "/static/media/merpay.988cc966f8b68aeb6731.png",
@@ -27,12 +27,12 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.6043e663.css.map": "/static/css/main.6043e663.css.map",
-    "main.7e70fcf0.js.map": "/static/js/main.7e70fcf0.js.map",
+    "main.35df0280.css.map": "/static/css/main.35df0280.css.map",
+    "main.99f79259.js.map": "/static/js/main.99f79259.js.map",
     "453.1407b060.chunk.js.map": "/static/js/453.1407b060.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.6043e663.css",
-    "static/js/main.7e70fcf0.js"
+    "static/css/main.35df0280.css",
+    "static/js/main.99f79259.js"
   ]
 }
