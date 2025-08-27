@@ -496,9 +496,8 @@
 }
 /*-------- カスタムCSS  ---------*/
 .profImg {
-  max-width: 220px;
   margin: 0 auto 20px auto;
-  max-height: 220px;
+
   height: 100%;
   overflow: hidden;
   @include tab {
@@ -511,8 +510,10 @@
     object-fit: cover;
     object-position: center -20px;
     display: block;
+    filter: grayscale(100%) contrast(80%) brightness(110%);
   }
 }
+
 .profDesc {
   @include tab {
     display: flex;

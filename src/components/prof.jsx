@@ -1,5 +1,6 @@
 import React from "react";
 import profImage from "../assets/images/prof/prof.jpg";
+import { FaLinkedin } from "react-icons/fa6";
 
 const copy = {
   jp: {
@@ -11,47 +12,74 @@ const copy = {
   },
   global: {
     greeting:
-      "Hello! My name is Asami Okamoto. Thank you for browsing my portfolio Site.",
+      "Hello! My name is Asami Okamoto. Thank you for browsing my portfolio site.",
     summary1:
-      "A web developer with 5 years of experience, specializing in React-based front-end development. At Wabify, a hospitality-focused software company in Australia, I served as the UI/UX Head Designer, leading website projects from direction to implementation. I proposed and designed new features while contributing extensively across UI/UX, high-quality programming, and project direction.",
+      "I’m a web developer with 5 years of experience in React-based front-end development. At Wabify, a hospitality software company in Australia, I worked as UI/UX Head Designer, leading projects from direction to implementation and delivering new features across design and code.",
     summary2:
-      "Known for my strong communication skills and collaborative approach, I worked closely with teammates and the backend team in the Philippines to deliver cohesive, efficient solutions. I’m passionate about writing clean, maintainable code and building globally understandable, highly aesthetic interfaces. I’m now seeking a new opportunity where I can bring thoughtful design, strong technical execution, and prompt team communication to the next level.",
+      "I value collaboration and clean, maintainable code, working closely with global teams to create clear, accessible, and aesthetic interfaces.",
   },
 };
 
 const ProfileSection = ({ audience }) => {
   const t = copy[audience] || copy.global;
   return (
-    <section className="prof">
-      <div className="globalInner">
-        <div className="prof__body">
-          <div className="profDesc">
-            <div className="profImg">
-              <img
-                fetchpriority="high"
-                decoding="async"
-                width="300"
-                height="300"
-                src={profImage}
-                alt=""
-                className="wp-image-43"
-              />
-            </div>
-            <div className="profLead">
-              <p className="u_mb--s">{t.greeting}</p>
-              <h2 className="p_sec__ttl--xs">SKILLS</h2>
-              <p>
-                React / JavaScript / TypeScript / UI/UX Design / Node.js / REST
-                API / Axios / WordPress / PHP / Bootstrap / Sass / Figma / Adobe
-                Creative Suite (Illustrator, Photoshop, XD, Premiere Pro, After
-                Effects) / Git / Slack / Responsive Design
-              </p>
+    <section className="">
+      <div className="flex gap-24">
+        <div className="profImg max-w-[400px]">
+          <img
+            fetchpriority="high"
+            decoding="async"
+            width="400"
+            height="400"
+            src={profImage}
+            alt=""
+            className="wp-image-43 grayscale"
+          />
+        </div>
+
+        <div className="">
+          <div className="text-6xl font-bold mb-8">Asami Okamoto</div>
+          <div className="mb-16">
+            <p className="text-gray-500 mb-4">{t.summary1}</p>
+            <p className="text-gray-500">{t.summary2}</p>
+          </div>
+          <div className="mb-16">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">SKILLS</h2>
+            <div className="flex flex-wrap gap-4 text-gray-600">
+              {[
+                "React",
+                "JavaScript",
+                "TypeScript",
+                "UI/UX Design",
+                "Node.js",
+                "REST API",
+                "Axios",
+                "Tailwind CSS",
+                "Sass",
+                "Figma",
+                "Adobe XD",
+                "Premiere Pro",
+                "WordPress",
+              ].map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1 rounded-full border text-gray-600 bg-gray-100 text-[14px]"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
           </div>
-          <div className="profTxt">
-            <h2 className="p_sec__ttl--xs">SUMMARY</h2>
-            <p>{t.summary1}</p>
-            <p>{t.summary2}</p>
+          <div className="mb-16">
+            <a
+              href="https://www.linkedin.com/in/samidevjp/"
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-blue-600 transition-colors text-4xl inline-block"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedin />
+            </a>
           </div>
         </div>
       </div>

@@ -3,24 +3,8 @@
 \*------------------------------------*/
 .globalInner {
   margin: 0 auto;
-  padding: 0 sp_vw(25);
-  @include tab {
-    padding: 0;
-    max-width: $globalWidth;
-  }
-  @include pc {
-    max-width: 1010px;
-  }
-  &--s {
-    @extend .globalInner;
-    padding: 0;
-    @include tab {
-      max-width: pc_vw(858);
-    }
-    @include pc {
-      max-width: 858px;
-    }
-  }
+
+  max-width: 1200px;
 }
 .l_header {
   position: relative;
