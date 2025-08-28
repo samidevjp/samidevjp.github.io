@@ -1,5 +1,6 @@
 import React from "react";
 import TechSlider from "./techSlider";
+import ExternalLinks from "./ExternalLinks";
 import { copy } from "../copy";
 
 // Design Images
@@ -171,12 +172,13 @@ function WabiV2Section({ audience = "global", overview, goal }) {
       <div className="globalInner justify-between flex gap-24 items-center h-[700px] mb-60">
         <div>
           <h2 className="text-8xl font-bold mb-8">Wabify V2</h2>
+          <p className="text-gray-500 text-2xl mb-8">UI/UX Design</p>
           <p
             dangerouslySetInnerHTML={{ __html: t.uiuxLead }}
             className="text-gray-500 max-w-[800px]"
           />
         </div>
-        <div className="w-full  max-w-[450px] flex justify-center">
+        <div className="w-full  max-w-[450px]  justify-center md:flex hidden">
           <img src={wabiv2sp} alt="Wabify V2" className="max-w-[280px]" />
         </div>
       </div>
@@ -193,11 +195,11 @@ function WabiV2Section({ audience = "global", overview, goal }) {
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 w-full mb-60">
-          <div className="">
+          <div className="mb-24 md:mb-0">
             <h3 className="text-4xl font-semibold mb-4">Role</h3>
             <p className="text-gray-600 leading-relaxed">Lead UX Designer</p>
           </div>
-          <div className="">
+          <div className="mb-24 md:mb-0">
             <h3 className="text-4xl font-semibold mb-4">Tools</h3>
             <a href="https://wabify.com/" target="_blank" rel="noreferrer">
               Figma
@@ -214,19 +216,19 @@ function WabiV2Section({ audience = "global", overview, goal }) {
 
         <div className="mb-60">
           <h3 className="text-6xl font-semibold mb-6">
-            {audience === "jp" ? "課題（Findings）" : "Findings"}
+            {audience === "jp" ? "Findings" : "Findings"}
           </h3>
           <p className="text-gray-600 leading-relaxed mb-24 max-w-[800px]">
             {audience === "jp"
-              ? "Wabi V1 のテストとフィードバックから明らかになった主要な課題。"
+              ? "Wabi V1 の調査から明らかになった主要課題"
               : "Key issues identified from testing and feedback on Wabi V1."}
           </p>
-          <div className="md:grid md:grid-cols-3 gap-12">
+          <div className="md:grid md:grid-cols-3 gap-24 ">
             {findingsText.map((text, index) => (
-              <div key={index}>
+              <div key={index} className="mb-24 md:mb-0">
                 <h4 className="text-4xl mb-6 font-bold">
                   {audience === "jp"
-                    ? `課題 ${index + 1}`
+                    ? `Finding ${index + 1}`
                     : `Finding ${index + 1}`}
                 </h4>
                 <p className="text-gray-700">{text}</p>
@@ -238,7 +240,7 @@ function WabiV2Section({ audience = "global", overview, goal }) {
         {/* --- Solutions Section --- */}
         <div className="mb-60">
           <h3 className="text-6xl font-semibold mb-24">
-            {audience === "jp" ? "解決策（Solutions）" : "Solutions"}
+            {audience === "jp" ? "Solutions" : "Solutions"}
           </h3>
 
           {/* Solution 1 */}
@@ -251,14 +253,14 @@ function WabiV2Section({ audience = "global", overview, goal }) {
                 ? "メニュー構造を整理し、明確なサイドナビゲーションを導入しました。また、ダッシュボードを再設計し、主要なアクションがすぐに見つかるようにしました。これにより、不要な手順が減り、ユーザーが直感的に機能へアクセスできるようになりました。"
                 : "We streamlined the menu structure by introducing a clear side navigation and redesigned the dashboard to highlight key actions. This reduced unnecessary steps and allowed users to access frequently used features more intuitively."}
             </p>
-            <div className="grid md:grid-cols-2 items-center justify-center gap-12 max-h-[500px]">
+            <div className="grid md:grid-cols-2 items-center justify-center gap-12 md:max-h-[500px]">
               <img
-                className="object-contain w-full max-h-[500px]"
+                className="object-contain w-full md:max-h-[500px]"
                 src={wabiV2DashboardTab}
                 alt="Dashboard Tab"
               />
               <img
-                className="object-contain w-full max-h-[500px]"
+                className="object-contain w-full max-h-[350px] md:max-h-[500px]"
                 src={wabiSideMenuSp}
                 alt="Side Menu Mobile"
               />
@@ -297,16 +299,10 @@ function WabiV2Section({ audience = "global", overview, goal }) {
             </div>
           </div>
         </div>
-        {/* <div className="mb-60">
-          <h3 className="text-6xl font-semibold mb-8">Showcase</h3>
-          <TechSlider
-            slides={v2ShowcaseSlides.map((s) => ({
-              title: s.title,
-              img: null,
-              customContent: s.content,
-            }))}
-          />
-        </div> */}
+        <hr className="border-gray-200 mb-60" />
+
+        {/* --- External Links --- */}
+        <ExternalLinks audience={audience} />
       </div>
     </section>
   );

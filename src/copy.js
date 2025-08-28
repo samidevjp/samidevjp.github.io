@@ -5,7 +5,7 @@ export const copy = {
     works: "制作事例",
     uiuxLead: "飲食業界向けSaaSプラットフォームのデザインコレクション",
     programmingLead:
-      "React / TypeScript / Tailwind CSS / Next.js <br />デザインから実装まで全てに携わり、再利用可能なコンポーネントの構築を大切に実装しました。また、モダンな予約サイトとその公式LPの開発で中心的な役割を果たしました。UI/UXディレクション、実装、ダッシュボード統合を含むフロントエンド全体を担当しました。",
+      "飲食業界向けSaaSプラットフォームのフロントエンド開発を担当しました。<br />React / TypeScript / Tailwind CSS / Next.js / Stripe API / POS system",
     wabifyTitle: "Wabi 公式ランディングページ",
     wabifyLead:
       "Wabiのランディングページ全体のディレクション、デザイン、実装を担当しました。製品の主要機能を紹介し、お問い合わせページも設けています。",

@@ -38,21 +38,21 @@ function App() {
           path="/"
           element={
             <>
-              <section className="h-[600px] px-40 flex items-center relative">
+              <section className="h-[600px] px-8 md:px-40 flex items-center relative">
                 <div className="mx-auto max-w-[1200px] w-full">
-                  <h1 className="text-8xl max-w-[600px]">
+                  <h1 className="text-7xl md:text-8xl max-w-[600px]">
                     Design Engineer bridging UI/UX and front-end implementation.
                   </h1>
                 </div>
                 <Header />
               </section>
 
-              <div className="w-full px-40 mb-80">
+              <div className="w-full px-8 md:px-40 mb-80">
                 <div className="max-w-[1200px] mx-auto">
-                  <div className="flex w-full gap-24">
+                  <div className="flex w-full gap-24 flex-col md:flex-row">
                     {/* V2 */}
                     <Link to="/wabi-v2" className="block group flex-1">
-                      <div className=" p-40 bg-gray-200 overflow-hidden mb-8 w-full h-[500px] flex items-center justify-center">
+                      <div className="p-20 md:p-40 bg-gray-200 overflow-hidden mb-8 w-full h-[300px] md:h-[500px] flex items-center justify-center">
                         <img
                           src={v2Sp}
                           alt="Wabify V2"
@@ -68,7 +68,7 @@ function App() {
 
                     {/* V1 */}
                     <Link to="/wabi-v1" className="block group flex-1">
-                      <div className="p-40 bg-gray-200 overflow-hidden mb-8 w-full h-[500px] flex items-center justify-center">
+                      <div className="p-20 md:p-40 bg-gray-200 overflow-hidden mb-8 w-full h-[300px] md:h-[500px] flex items-center justify-center">
                         <img
                           src={programming}
                           alt="Wabify V1"

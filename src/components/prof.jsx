@@ -24,7 +24,7 @@ const ProfileSection = ({ audience }) => {
   const t = copy[audience] || copy.global;
   return (
     <section className="">
-      <div className="flex gap-24">
+      <div className="flex gap-24 flex-col md:flex-row">
         <div className="profImg max-w-[400px]">
           <img
             fetchpriority="high"
