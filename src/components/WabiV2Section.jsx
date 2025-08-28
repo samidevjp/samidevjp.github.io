@@ -168,7 +168,7 @@ function WabiV2Section({ audience = "global", overview, goal }) {
   ];
   return (
     <section className="mb-96">
-      <div className="globalInner flex gap-24 items-center h-[700px] mb-60">
+      <div className="globalInner justify-between flex gap-24 items-center h-[700px] mb-60">
         <div>
           <h2 className="text-8xl font-bold mb-8">Wabify V2</h2>
           <p
@@ -176,8 +176,8 @@ function WabiV2Section({ audience = "global", overview, goal }) {
             className="text-gray-500 max-w-[800px]"
           />
         </div>
-        <div className="w-full px-20 max-w-[350px]">
-          <img src={wabiv2sp} alt="Wabify V2" />
+        <div className="w-full  max-w-[450px] flex justify-center">
+          <img src={wabiv2sp} alt="Wabify V2" className="max-w-[280px]" />
         </div>
       </div>
       <div className="globalInner">
@@ -191,6 +191,7 @@ function WabiV2Section({ audience = "global", overview, goal }) {
             <p className="text-gray-600 leading-relaxed">{goalText}</p>
           </div>
         </div>
+
         <div className="grid md:grid-cols-3 gap-6 w-full mb-60">
           <div className="">
             <h3 className="text-4xl font-semibold mb-4">Role</h3>
