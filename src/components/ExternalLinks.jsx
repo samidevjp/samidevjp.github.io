@@ -8,7 +8,9 @@ const ExternalLinks = ({ audience = "global" }) => {
   return (
     <>
       <div className="mb-24">
-        <h3 className="text-6xl font-semibold mb-4">External Links</h3>
+        <h3 className="text-6xl font-semibold mb-4 use-inter">
+          External Links
+        </h3>
         <p className="text-gray-500 leading-relaxed"></p>
       </div>
       <div className=" grid md:grid-cols-2 gap-24 max-w-[800px] mx-auto">

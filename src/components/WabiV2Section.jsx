@@ -169,9 +169,9 @@ function WabiV2Section({ audience = "global", overview, goal }) {
   ];
   return (
     <section className="mb-96">
-      <div className="globalInner justify-between flex gap-24 items-center h-[700px] mb-60">
+      <div className="globalInner justify-between flex gap-24 items-center h-[780px] mb-60">
         <div>
-          <h2 className="text-8xl font-bold mb-8">Wabify V2</h2>
+          <h2 className="text-8xl mb-8 use-inter font-normal">Wabify V2</h2>
           <p className="text-gray-500 text-2xl mb-8">UI/UX Design</p>
           <p
             dangerouslySetInnerHTML={{ __html: t.uiuxLead }}
@@ -185,28 +185,28 @@ function WabiV2Section({ audience = "global", overview, goal }) {
       <div className="globalInner">
         <div className="max-w-[800px] mb-60">
           <div className="mb-24">
-            <h3 className="text-6xl font-semibold mb-4">Overview</h3>
+            <h3 className="text-6xl font-semibold mb-4 use-inter">Overview</h3>
             <p className="text-gray-600 leading-relaxed">{overviewText}</p>
           </div>
           <div className="">
-            <h3 className="text-6xl font-semibold mb-4">Goal</h3>
+            <h3 className="text-6xl font-semibold mb-4 use-inter">Goal</h3>
             <p className="text-gray-600 leading-relaxed">{goalText}</p>
           </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 w-full mb-60">
           <div className="mb-24 md:mb-0">
-            <h3 className="text-4xl font-semibold mb-4">Role</h3>
+            <h3 className="text-4xl font-semibold mb-4 use-inter">Role</h3>
             <p className="text-gray-600 leading-relaxed">Lead UX Designer</p>
           </div>
           <div className="mb-24 md:mb-0">
-            <h3 className="text-4xl font-semibold mb-4">Tools</h3>
+            <h3 className="text-4xl font-semibold mb-4 use-inter">Tools</h3>
             <a href="https://wabify.com/" target="_blank" rel="noreferrer">
               Figma
             </a>
           </div>
           <div className="">
-            <h3 className="text-4xl font-semibold mb-4">Team</h3>
+            <h3 className="text-4xl font-semibold mb-4 use-inter">Team</h3>
             <p className="text-gray-600 leading-relaxed">
               5 members (designer, developers, project manager)
             </p>
@@ -215,7 +215,7 @@ function WabiV2Section({ audience = "global", overview, goal }) {
         <hr className="border-gray-200 mb-60" />
 
         <div className="mb-60">
-          <h3 className="text-6xl font-semibold mb-6">
+          <h3 className="text-6xl font-semibold mb-6 use-inter">
             {audience === "jp" ? "Findings" : "Findings"}
           </h3>
           <p className="text-gray-600 leading-relaxed mb-24 max-w-[800px]">
@@ -226,7 +226,7 @@ function WabiV2Section({ audience = "global", overview, goal }) {
           <div className="md:grid md:grid-cols-3 gap-24 ">
             {findingsText.map((text, index) => (
               <div key={index} className="mb-24 md:mb-0">
-                <h4 className="text-4xl mb-6 font-bold">
+                <h4 className="text-4xl mb-6 font-bold use-inter">
                   {audience === "jp"
                     ? `Finding ${index + 1}`
                     : `Finding ${index + 1}`}
@@ -239,13 +239,13 @@ function WabiV2Section({ audience = "global", overview, goal }) {
 
         {/* --- Solutions Section --- */}
         <div className="mb-60">
-          <h3 className="text-6xl font-semibold mb-24">
+          <h3 className="text-6xl font-semibold mb-24 use-inter">
             {audience === "jp" ? "Solutions" : "Solutions"}
           </h3>
 
           {/* Solution 1 */}
           <div className="mb-40">
-            <h4 className="text-4xl font-bold mb-6">
+            <h4 className="text-4xl font-bold mb-6 use-inter">
               {audience === "jp" ? "Solution 1" : "Solution 1"}
             </h4>
             <p className="text-gray-700 leading-relaxed mb-12 max-w-[800px]">
@@ -269,7 +269,7 @@ function WabiV2Section({ audience = "global", overview, goal }) {
 
           {/* Solution 2 */}
           <div className="mb-40">
-            <h4 className="text-4xl font-bold mb-6">
+            <h4 className="text-4xl font-bold mb-6 use-inter">
               {audience === "jp" ? "Solution 2" : "Solution 2"}
             </h4>
             <p className="text-gray-700 leading-relaxed mb-12 max-w-[800px]">
@@ -285,7 +285,7 @@ function WabiV2Section({ audience = "global", overview, goal }) {
 
           {/* Solution 3 */}
           <div className="mb-40">
-            <h4 className="text-4xl font-bold mb-6">
+            <h4 className="text-4xl font-bold mb-6 use-inter">
               {audience === "jp" ? "Solution 3" : "Solution 3"}
             </h4>
             <p className="text-gray-700 leading-relaxed mb-12 max-w-[800px]">

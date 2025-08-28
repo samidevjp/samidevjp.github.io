@@ -1,4 +1,5 @@
 // src/App.js
+import React from "react";
 import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import "./assets/css/tailwind.css";
 import "./assets/sass/style.scss";
@@ -28,6 +29,11 @@ function App() {
   const audience = getAudience();
   const t = copy[audience];
 
+  // Set language attribute based on audience
+  React.useEffect(() => {
+    document.documentElement.lang = audience === "jp" ? "ja" : "en";
+  }, [audience]);
+
   return (
     <Router>
       {/* 必要なら簡易ナビ（消してOK） */}
@@ -40,7 +46,7 @@ function App() {
             <>
               <section className="h-[600px] px-8 md:px-40 flex items-center relative">
                 <div className="mx-auto max-w-[1200px] w-full">
-                  <h1 className="text-7xl md:text-8xl max-w-[600px]">
+                  <h1 className="text-7xl md:text-8xl max-w-[600px] use-inter font-normal">
                     Design Engineer bridging UI/UX and front-end implementation.
                   </h1>
                 </div>
@@ -59,7 +65,9 @@ function App() {
                           className="max-h-full max-w-full object-contain transform transition duration-300 group-hover:scale-105"
                         />
                       </div>
-                      <p className="text-gray-900 text-4xl">Wabify V2</p>
+                      <p className="text-gray-900 text-4xl use-inter">
+                        Wabify V2
+                      </p>
                       <p className="text-gray-500">
                         Design Engineer bridging UI/UX and front-end
                         implementation.
@@ -76,7 +84,9 @@ function App() {
                         />
                       </div>
 
-                      <p className="text-gray-900 text-4xl">Wabify V1</p>
+                      <p className="text-gray-900 text-4xl use-inter">
+                        Wabify V1
+                      </p>
                       <p className="text-gray-500">
                         Design Engineer bridging UI/UX and front-end
                         implementation.

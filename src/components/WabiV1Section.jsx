@@ -113,9 +113,9 @@ function WabiV1Section({ audience = "global" }) {
   return (
     <section className="mb-96">
       {/* --- Hero --- */}
-      <div className="globalInner flex gap-24 items-center h-[700px] mb-60">
+      <div className="globalInner flex gap-24 items-center h-[680px] mb-60 pt-40">
         <div>
-          <h2 className="text-8xl font-bold mb-8">Wabify V1</h2>
+          <h2 className="text-8xl font-normal mb-8 use-inter">Wabify V1</h2>
           <p className="text-gray-500 text-2xl mb-8">Front-end Development</p>
           <p
             dangerouslySetInnerHTML={{ __html: t.programmingLead }}
@@ -144,11 +144,11 @@ function WabiV1Section({ audience = "global" }) {
         {/* --- Overview & Goal --- */}
         <div className="max-w-[800px] mb-60">
           <div className="mb-24">
-            <h3 className="text-6xl font-semibold mb-4">Overview</h3>
+            <h3 className="text-6xl font-semibold mb-4 use-inter">Overview</h3>
             <p className="text-gray-500 leading-relaxed">{overviewText}</p>
           </div>
           <div className="mb-24">
-            <h3 className="text-6xl font-semibold mb-4">Goal</h3>
+            <h3 className="text-6xl font-semibold mb-4 use-inter">Goal</h3>
             <p className="text-gray-500 leading-relaxed">{goalText}</p>
           </div>
         </div>
@@ -157,10 +157,10 @@ function WabiV1Section({ audience = "global" }) {
         {/* --- Cases --- */}
         <div className="mb-60">
           {cases.map((c, i) => (
-            <section key={c.title ?? i} className="mb-40">
-              <h4 className="text-4xl font-bold mb-6">{c.title}</h4>
+            <section key={c.title ?? i} className="mb-60">
+              <h4 className="text-4xl font-bold mb-8">{c.title}</h4>
 
-              <div className="mb-12 max-w-[800px] text-gray-500 leading-relaxed space-y-4">
+              <div className="mb-20 max-w-[800px] text-gray-500 leading-relaxed space-y-4">
                 {Array.isArray(c.desc) ? (
                   c.desc.map((line, idx) => (
                     <p

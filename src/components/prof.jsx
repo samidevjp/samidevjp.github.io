@@ -38,7 +38,7 @@ const ProfileSection = ({ audience }) => {
         </div>
 
         <div className="">
-          <div className="text-6xl font-bold mb-8">Asami Okamoto</div>
+          <div className="text-5xl font-bold mb-8">Asami Okamoto</div>
           <div className="mb-16">
             <p className="text-gray-500 mb-4">{t.summary1}</p>
             <p className="text-gray-500">{t.summary2}</p>
