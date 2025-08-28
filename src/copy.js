@@ -3,6 +3,19 @@ export const copy = {
   jp: {
     about: "自己紹介",
     works: "制作事例",
+    home: {
+      hero: "UI/UX とフロントエンドをつなぐデザインエンジニア。",
+      v2: {
+        title: "Wabify V2",
+        subtitle:
+          "UI/UX中心 ― デザインシステム、プロトタイピング、ユーザーフロー設計。",
+      },
+      v1: {
+        title: "Wabify V1",
+        subtitle:
+          "フロントエンド中心 ― React/TypeScript による機能実装と連携。",
+      },
+    },
     uiuxLead: "飲食業界向けSaaSプラットフォームのデザインコレクション",
     programmingLead:
       "飲食業界向けSaaSプラットフォームのフロントエンド開発を担当しました。<br />React / TypeScript / Tailwind CSS / Next.js / Stripe API / POS system",
@@ -50,6 +63,18 @@ export const copy = {
   global: {
     about: "Creating clean, functional, and beautiful web experiences.",
     works: "A selection of recent design and development work.",
+    home: {
+      hero: "Design Engineer bridging UI/UX and front-end implementation.",
+      v2: {
+        title: "Wabify V2",
+        subtitle: "Focused on UI/UX — design systems, prototyping, user flows.",
+      },
+      v1: {
+        title: "Wabify V1",
+        subtitle:
+          "Focused on front-end — React/TypeScript features and integration.",
+      },
+    },
     uiuxLead:
       "A collection of interface designs crafted for a hospitality-focused SaaS platform, covering both customer-facing and admin experiences.",
     programmingLead:

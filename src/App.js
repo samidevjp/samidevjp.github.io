@@ -65,13 +65,11 @@ function App() {
                           className="max-h-full max-w-full object-contain transform transition duration-300 group-hover:scale-105"
                         />
                       </div>
+
                       <p className="text-gray-900 text-4xl use-inter">
-                        Wabify V2
+                        {t.home.v2.title}
                       </p>
-                      <p className="text-gray-500">
-                        Design Engineer bridging UI/UX and front-end
-                        implementation.
-                      </p>
+                      <p className="text-gray-500">{t.home.v2.subtitle}</p>
                     </Link>
 
                     {/* V1 */}
@@ -85,12 +83,9 @@ function App() {
                       </div>
 
                       <p className="text-gray-900 text-4xl use-inter">
-                        Wabify V1
+                        {t.home.v1.title}
                       </p>
-                      <p className="text-gray-500">
-                        Design Engineer bridging UI/UX and front-end
-                        implementation.
-                      </p>
+                      <p className="text-gray-500">{t.home.v1.subtitle}</p>
                     </Link>
                   </div>
                 </div>
