@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.0a5c7d36.css",
-    "main.js": "/static/js/main.2a900cf6.js",
+    "main.js": "/static/js/main.6458d070.js",
     "static/js/453.ace21015.chunk.js": "/static/js/453.ace21015.chunk.js",
     "static/media/widget.png": "/static/media/widget.a5a525d28478d3076fee.png",
     "static/media/merpay.png": "/static/media/merpay.988cc966f8b68aeb6731.png",
@@ -26,7 +26,9 @@
     "static/media/design-item.png": "/static/media/design-item.008cbda9f2f9069cbef0.png",
     "static/media/programming.png": "/static/media/programming.a2bb7277066cd39d1721.png",
     "static/media/design-mod.png": "/static/media/design-mod.33493924046a571b1dbe.png",
+    "static/media/v2-booking-detail-tab.png": "/static/media/v2-booking-detail-tab.1da679983223f87000ca.png",
     "static/media/v2-edit-modifier-tab.png": "/static/media/v2-edit-modifier-tab.abc67e910a781d302ef3.png",
+    "static/media/v2-timeline-tab.png": "/static/media/v2-timeline-tab.e894ae763e1c31aba453.png",
     "static/media/v2-stock-count-tab.png": "/static/media/v2-stock-count-tab.16bbbcc82b756721cb48.png",
     "static/media/v2-invoice-tab.png": "/static/media/v2-invoice-tab.26022b0368915660762f.png",
     "static/media/v2-items-tab.png": "/static/media/v2-items-tab.96b11cef777783f1e60d.png",
@@ -46,11 +48,11 @@
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
     "main.0a5c7d36.css.map": "/static/css/main.0a5c7d36.css.map",
-    "main.2a900cf6.js.map": "/static/js/main.2a900cf6.js.map",
+    "main.6458d070.js.map": "/static/js/main.6458d070.js.map",
     "453.ace21015.chunk.js.map": "/static/js/453.ace21015.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0a5c7d36.css",
-    "static/js/main.2a900cf6.js"
+    "static/js/main.6458d070.js"
   ]
 }

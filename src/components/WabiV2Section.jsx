@@ -31,6 +31,8 @@ import wabiV2DashboardTab from "../assets/images/v2-dashboard-tab.png";
 import wabiv2StockCount from "../assets/images/v2-stock-count-tab.png";
 import wabiv2EditMod from "../assets/images/v2-edit-modifier-tab.png";
 import wabiSideMenuSp from "../assets/images/v2-sidemenu-sp.png";
+import wabiV2BookingDetailTab from "../assets/images/v2-booking-detail-tab.png";
+import wabiV2Timeline from "../assets/images/v2-timeline-tab.png";
 
 function WabiV2Section({ audience = "global", overview, goal }) {
   const t = copy[audience];
@@ -105,14 +107,12 @@ function WabiV2Section({ audience = "global", overview, goal }) {
   const findingsText =
     audience === "jp"
       ? [
-          "メニュー構造がわかりにくく、不要な手順が多いため操作が複雑で時間がかかった。",
-          "冗長なデザインや過剰なテキストが多く、画面が読みづらく分かりにくかった。",
-          "戻る／取り消し機能がなく、見た目もユーザーフレンドリーではなかったためストレスを感じた。",
+          "Floor、席、時間の区切りがすべて画一的に表示されており、どこがテーブルの境界でどこが時間の目盛りなのかが直感的に把握しにくかった。",
+          "そのため予約情報の確認や空席の把握に余計な認知コストがかかっていた。",
         ]
       : [
-          "Users struggled with the menu structure and felt there were too many unnecessary steps, making navigation confusing and time-consuming.",
-          "Redundant design elements and excessive text made the interface hard to read and overwhelming.",
-          "Missing undo/back options and an unfriendly overall look caused frustration and reduced usability.",
+          "The boundaries between floors, tables, and time slots were visually uniform, making it hard to quickly distinguish where one section ended and another began.",
+          "This caused confusion when checking reservations or spotting available tables, increasing cognitive load.",
         ];
 
   // --- New Slides Array ---
@@ -250,18 +250,18 @@ function WabiV2Section({ audience = "global", overview, goal }) {
             </h4>
             <p className="text-gray-700 leading-relaxed mb-12 max-w-[800px]">
               {audience === "jp"
-                ? "メニュー構造を整理し、明確なサイドナビゲーションを導入しました。また、ダッシュボードを再設計し、主要なアクションがすぐに見つかるようにしました。これにより、不要な手順が減り、ユーザーが直感的に機能へアクセスできるようになりました。"
-                : "We streamlined the menu structure by introducing a clear side navigation and redesigned the dashboard to highlight key actions. This reduced unnecessary steps and allowed users to access frequently used features more intuitively."}
+                ? "フロア、席、時間の区切りを視覚的に差別化したタイムラインデザインを導入しました。横軸は時間、縦軸はテーブルを明確に区切り、Floorごとにセクションを分けることで直感的に把握できるようにしました。これにより、重複予約や空席の確認が容易になり、スタッフは効率的に席を管理できるようになりました。"
+                : "We introduced a redesigned timeline with clear visual distinctions between floors, tables, and time slots. The horizontal axis represents time, while the vertical axis organizes tables with separated floor sections, making the layout more intuitive. This allows staff to easily identify overlaps and available tables, enabling more efficient reservation management."}
             </p>
             <div className="grid md:grid-cols-2 items-center justify-center gap-12 md:max-h-[500px]">
               <img
                 className="object-contain w-full md:max-h-[500px]"
-                src={wabiV2DashboardTab}
+                src={wabiV2Timeline}
                 alt="Dashboard Tab"
               />
               <img
                 className="object-contain w-full max-h-[350px] md:max-h-[500px]"
-                src={wabiSideMenuSp}
+                src={wabiV2BookingDetailTab}
                 alt="Side Menu Mobile"
               />
             </div>
